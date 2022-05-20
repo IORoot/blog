@@ -1,5 +1,5 @@
 ---
-slug: "/blog/test-git-post"
+slug: "/projects/test-git-post"
 date: "2019-05-04"
 title: "My first git post from markdown"
 ---
