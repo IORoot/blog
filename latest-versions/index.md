@@ -1,0 +1,20 @@
+---
+slug: "/projects/latest-versions"
+date: "2022-05-23"
+title: "Latest-Versions Project"
+---
+
+# The lead...
+
+So, my first little project is going to scrape a bunch of repos / websites for the latest version
+of their product. 
+
+The site will display those latest versions and update every day. It's a single source of truth for
+a large range of products. It also doesn't have to be limited to software either...
+
+The initial plan is to get the latest versions of these categories:
+- Operating Systems
+- Browsers
+- IDEs
+
+Then we'll build from there.
