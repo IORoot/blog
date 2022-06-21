@@ -1,8 +1,7 @@
 ---
-slug: "/posts/svg-effects"
+slug: "/posts/svg-effects-for-instagram-like-filters"
 date: "2022-06-21"
 title: "👨🏻‍🎨 SVG effects for Instagram-like photo editing adjustments"
-hero_image: "bigben.jpg"
 ---
 
 
@@ -66,8 +65,6 @@ Our base SVG will be this:
 </svg>
 ```
 
-Base SVG
-
 I'm not going to bother with the `xmlns="http://www.w3.org/2000/svg"` and the `xmlns:xlink="http://www.w3.org/1999/xlink"` for now. I want to make this all as easy to read as possible.
 
 Which gives us this:
@@ -111,6 +108,20 @@ So the code becomes:
   <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#overSaturateThis)"></image>
 </svg>
 ```
+
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="overSaturateThis">
+            <feColorMatrix 
+            	type="saturate" 
+                in="SourceGraphic" 
+                values="3"
+            ></feColorMatrix>
+        </filter>
+    </defs>
+    
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#overSaturateThis)"></image>
+</svg>
 
 ---
 
