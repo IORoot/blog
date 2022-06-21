@@ -1,0 +1,302 @@
+---
+slug: "/projects/ffmpeg"
+date: "2022-06-21"
+title: "Automating Videos with FFMpeg"
+---
+
+# Auto-Editing, Converting, Colour Correcting and Grading Videos with FFMpeg
+
+## Video.m4v + BASH + FFMpeg
+
+Not just converting, but automated editing, watermarking, encoding and colour-grading.
+
+The ideal situation would be a fully automated video-editing step that did all the hard work for me. I looked into using `aerender` (After Effects CLI) to run templates, but it seemed way too complicated and too OTT for the simple types of things I want to do... Enter `FFMpeg`.
+
+FFMpeg is a super-powered command-line tool for video processing. Many video software packages have it under the hood running in the backend. After an afternoon of playing, it wasn't too tricky to understand, so lets dive in...
+
+You'll have to look up how to install FFMpeg yourself. Google is your friend.
+
+Things I want to do:
+
+1.  Convert to .MP4
+2.  Add a watermark for the first 3 seconds of the video.
+3.  Cut any crap footage off the beginning
+4.  Trim it to a maximum of 60 seconds (for Instagram)
+5.  Resize it to smaller dimensions (to save file-sizes for instagram uploads)
+6.  If possible, add a LUT to colour-grade the footage (like an instagram filter)
+
+OK, let's go through this bit by bit.
+
+## Step 1, conversion to .mp4
+
+`ffmpeg -i input_movie.m4v output_movie.mp4`
+
+Blam! Easy as pie. Actually, I don't know how to make pie... Easy as falling off a log. FFMpeg detects what encoding you want by the file extensions. The `-i` means 'input'.
+
+## OK, Let's tackle a harder one. The watermark.
+
+```bash
+ffmpeg
+    -i input_file.m4v 
+    -framerate 59 
+    -loop 1 
+    -i watermark_image.png 
+    -filter_complex "[1:v] fade=out:st=3:d=1:alpha=1 [ov]; [0:v][ov] overlay=0:0 [v]" 
+    -map "[v]" 
+    -map 0:a 
+    -c:v libx264 
+    -c:a copy  
+    output_movie.mp4
+```
+
+Whoa, whoa, whoa! WTF! Breathe... and release.
+
+It's not hard at all. Before we break it down, keep in mind the _order_ of the command-line flags (before or after input files) matter with FFMpeg.
+
+The inputs:
+
+```bash
+ffmpeg
+    -i input_file.m4v 
+    -framerate 59 
+    -loop 1 
+    -i watermark_image.png
+```
+
+Take one input as normal `-i input_file.m4v` (no flags before it).
+
+Take a second input `-i watermark_image.png` ,which is an image, and loop that as a single frame at 59fps... Why do this? Because as a single image (a la single frame), it needs to be made into a 3-second video to overlay the original video.
+
+```bash
+-filter_complex "
+    [1:v] fade=out:st=3:d=1:alpha=1 [ov]; 
+    [0:v][ov] overlay=0:0 [v]
+"
+```
+
+`filter_complex` is a flag to run multiple filters one after another. Each filter is separated by a semicolon. (so i've put them on separate lines for ease of reading.
+
+`[1:v] fade=out:st=3:d=1:alpha=1 [ov];`
+
+This is filter one. FFMpeg gives each input an ID (starting with `0`). Each input has an audio `:a` and video `:v` channel too. So `1:v` would represent the second input's video channel (That's the watermark, remember). Easy, right?
+
+Then the magic of the filter happens. `` `fade=out:st=3:d=1:alpha=1` `` says use the `fade` filter and fade `out`. `st`art at time position 3 (three seconds in), and run that filter for the `d`uration of 1 second. Also, apply any alpha channels (transparencies). Check the FFMpeg 'filter' section for more details on the flags available for the 'fade' filter.
+
+Lastly, label the output of this filter (to be used in the next filter) with `[ov]`. you can call it what you like here... `[mywatermarkedvideo]` is equally OK.
+
+The second filter is easier now we know the formatting of FFMPeg, right? `[0:v][ov] overlay=0:0 [v]`  says, use the input of video 0 `[0:v]` plus the input `[ov]` (that we just created from the last filter) and use the `overlay` filter with the parameters `0=0` which means position them on top of each other.
+
+Don't forget the output label... `[v]` which is now our watermarked video!
+
+```bash
+-map "[v]" 
+-map 0:a 
+-c:v libx264 
+-c:a copy
+```
+
+The `-map` flag is used to tell the FFMpeg encoder (the bit that converts the files) which audio channel and video channel to use. We want our new `[v]` watermarked video, and the original video audio `[0:a]`.
+
+The `-c` flags are used to tell the encoder how to convert. For the video, use the `-c:v libx264` library. For the audio, just copy it across, no need to convert it. `-c:a copy`
+
+Alrighty, we've now got a watermarked video! Whoop!
+
+## Next : Cutting any crap footage off the beginning.
+
+`-ss 4`
+
+Easy! This flag says seek start. Or in other words, seek to the start position where to start reading the input.
+
+## ffmpeg -ss 4 -i input_movie.mov output.mp4
+
+Don't forget, order matters. So because the `-ss` flag is before the first input, it'll start reading the input 4 seconds in. Which allows us to trim off any amount we want.
+
+## Trim it to a maximum of 60 seconds
+
+We're on a roll... This is now as simple as `-t 60` which is `t`ime 60 seconds. It's worth noting here that there's another flag `-to` which will go to the 60-second mark of the input video, not 60 seconds of duration from the starting input (remember we cut 4 seconds off the beginning).\
+
+## Resize it to smaller dimensions
+
+`-s 1080x608` Come on... it literally couldn't be easier, right? `S`ize is now 1080 wide by 608 high.
+
+## Add a LUT to colour-grade the footage
+
+Alright, this is the last part before we put it all together... It requires a little re-jig of the -`complex_filter` flag, because we want to add this extra one in.
+
+So, the filter now becomes:
+
+```bash
+-filter_complex "
+    [0:v] lut3d=mylut.3dl [outlut]; 
+    [1:v] fade=out:st=3:d=1:alpha=1 [ov]; 
+    [outlut][ov] overlay=0:0 [v]
+"
+```
+
+The first filter is now a `lut3d` one that takes the filename/location of the LUT you want to use. We apply it to the first input video `[0:v]` and output the label `[outlut]`.
+
+Lastly, instead of using the original video for the overlay stage of the watermarking, we'll use the colour-graded footage. So the `overlay` filter needs to change slightly to have that as the input instead.
+
+`[outlut][ov] overlay=0:0 [v]`
+
+That's it. Use the LUT-applied footage and overlay the watermark on top of it. That now becomes `[v]` which we can encode.
+
+The entire power-ranger assemble command becomes this:
+
+```bash
+ffmpeg
+    -ss 4
+    -i input_movie.m4v
+    -framerate 59 
+    -loop 1 
+    -i watermark.png
+    -s 1080x608 
+    -filter_complex "
+    	[0:v] lut3d=lutfile.3dl [outlut]; 
+        [1:v] fade=out:st=3:d=1:alpha=1 [ov]; 
+        [outlut][ov] overlay=0:0 [v]"
+    -map "[v]" 
+    -map 0:a 
+    -c:v libx264 
+    -c:a copy 
+    -t 60
+    -shortest output_movie.mp4
+```
+
+If you want to put this into a bash script, you'll need to add some tweaks for the newlines, and I actually add in a `-nostdin` flag for looping purposes and a `-hide_banner` to suppress output bits.
+
+There's one last flag we should use: `-shortest` which tells FFMpeg to keep going until the end of the _shortest_ video, then stop. So if the input video is 45sec long, it'll stop there. So 60sec is the maximum, but not necessarily the output length.
+
+So the full bash script would be:
+
+```bash
+#!/bin/bash
+
+ffmpeg -hide_banner \
+    -ss 4 \
+    -i input_movie.m4v \
+    -framerate 59 \
+    -loop 1 \
+    -i watermark.png \
+    -s 1080x608 \
+    -filter_complex "[0:v] lut3d=lutfile.3dl [outlut]; [1:v] fade=out:st=3:d=1:alpha=1 [ov]; [outlut][ov] overlay=0:0 [v]" \
+    -map "[v]" \
+    -map 0:a \
+    -c:v libx264 \
+    -c:a copy \
+    -t 60 \
+    -nostdin \
+    -shortest output_movie.mp4
+```
+
+Go get a cup of coffee... Then we'll add in some BASH bits to take variables on the command line.
+
+## Add BASH Variables to run on the command line.
+
+I'm going to start this by substituting the FFMpeg command with the bits I want to bee able to change:
+
+-   input file : `$INPUTFILE`
+-   watermark image `$WATERMARK`
+-   lut file `$LUTFILE`
+-   output file `$OUTPUTFILE`
+
+```bash
+#!/bin/bash
+
+ffmpeg -hide_banner \
+    -ss 4 \
+    -i $INPUTFILE \
+    -framerate 59 \
+    -loop 1 \
+    -i $WATERMARK \
+    -s 1080x608 \
+    -filter_complex "[0:v] lut3d=$LUTFILE [outlut]; [1:v] fade=out:st=3:d=1:alpha=1 [ov]; [outlut][ov] overlay=0:0 [v]" \
+    -map "[v]" \
+    -map 0:a \
+    -c:v libx264 \
+    -c:a copy \
+    -t 60 \
+    -nostdin \
+    -shortest $OUTPUTFILE
+```
+
+If this is to be a command-line tool, we need to check this variables are input because the FFMpeg will fail. So we can add before the command:
+
+```bash
+# Take Arguments.
+if [ "$#" -ne 4 ]; then
+  echo "$0 $1 $2 $3 $4"  >&2
+  echo "Usage: $0 FILE WATERMARK LUTFILE OUTPUTFILE " >&2
+  exit 1
+fi
+```
+
+Which reads: "If the number of inputs does NotEqual 4" echo this message and exit.
+
+Otherwise, it does equal 4, so continue.
+
+Now, lets assign names to the variables. Because... good practice.
+
+```bash
+INPUTFILE=$1
+WATERMARK=$2
+LUTFILE=$3
+OUTPUTFILE=$4
+```
+
+We could do many more checks and bits, but lets leave it there... Create a new file `touch convert_video.sh` and paste this in:
+
+```bash
+#!/bin/bash
+
+# Take Arguments.
+if [ "$#" -ne 4 ]; then
+  echo "$0 $1 $2 $3 $4"  >&2
+  echo "Usage: $0 FILE WATERMARK LUTFILE OUTPUTFILE " >&2
+  exit 1
+fi
+
+INPUTFILE=$1
+WATERMARK=$2
+LUTFILE=$3
+OUTPUTFILE=$4
+
+ffmpeg -hide_banner \
+    -ss 4 \
+    -i $INPUTFILE \
+    -framerate 59 \
+    -loop 1 \
+    -i $WATERMARK \
+    -s 1080x608 \
+    -filter_complex "[0:v] lut3d=$LUTFILE [outlut]; [1:v] fade=out:st=3:d=1:alpha=1 [ov]; [outlut][ov] overlay=0:0 [v]" \
+    -map "[v]" \
+    -map 0:a \
+    -c:v libx264 \
+    -c:a copy \
+    -t 60 \
+    -nostdin \
+    -shortest $OUTPUTFILE
+    
+exit 0
+```
+
+Make sure the file is executable: `` chmod +x `convert_video.sh` ``
+
+Then run it with the variables on the command line:
+
+`./convert_video.sh in_video.mov watermark.png mylut.3dl out_video.mp4`
+
+Voila!
+
+This will convert your video, add the watermark, apply the LUT file, trim it, cut it and resize it.
+
+There's so much more we could do (and I have) to add to this process... in the github repository you'll see that I've added the ability to do the following things:
+
+-   Loop over multiple files, one after another.
+-   Control what happens to each file (cut point, length, LUT file, etc... ) with a CSV file.
+-   Generate that CSV file.
+-   Control all defaults on the whole process with a `config.conf` file.  (Default LUT, directories to look in, remove exisitng files, etc...)
+
+## Bug fix.
+
+There was one bug that proved a pain in the ass... Trimming the video to the correct length. There's a load of stuff to do with keyframes and not cutting on the right one with FFMpeg. So you may find the last second of the video may freeze. I've fixed that by encoding _beyond_ the duration needed during an encoding process, then, once the video is converted, I'll do the cut with a second FFMpeg command.
