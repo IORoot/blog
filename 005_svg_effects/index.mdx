@@ -2,14 +2,15 @@
 slug: "/posts/svg_effects"
 date: "2022-06-21"
 title: "👨🏻‍🎨 SVG effects for Instagram-like photo editing adjustments"
+hero_image: "bigben.jpg"
 ---
 
 
 Note, this article is going to try to be as simple as possible. I'm not going into the depths of SVG functions and elements... more just a reference on how to do specific things. It's a cobbled collection of information I've found from other people rather than any critical-thinking on my part. Check out the links for more in-depth info on each topic.
 
-TL;DR [Quick Reference is at the bottom of the page.](https://ioroot.herokuapp.com/svg-effects-for-instagram-like-filters/#-quick-reference)
+TL;DR [Quick Reference is at the bottom of the page.](#-quick-reference)
 
-![](https://res-3.cloudinary.com/hvqqopet4/image/upload/q_auto/v1/ghost-blog-images/bigben_o.jpg)
+![](bigben.jpg)
 
 ## Just some background info...
 
@@ -61,7 +62,7 @@ Our base SVG will be this:
 
 ```xml
 <svg viewBox="0 0 1500 1000">
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000"></image>
 </svg>
 ```
 
@@ -107,7 +108,7 @@ So the code becomes:
         </filter>
     </defs>
     
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#overSaturateThis)"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#overSaturateThis)"></image>
 </svg>
 ```
 
@@ -143,7 +144,7 @@ Let's bring the brightness down by half (0.5) in this example.
         </filter>
     </defs>
     
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#lowerTheBrightness)"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#lowerTheBrightness)"></image>
 </svg>
 ```
 
@@ -187,7 +188,7 @@ Plug it into the full code to effect the image and you've got this.
    		</filter>
     </defs>
     
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#enhanceTheContrast)"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#enhanceTheContrast)"></image>
 </svg>
 ```
 
@@ -220,7 +221,7 @@ Playing with the `-1` up and down can increase or decrease the sharpness. Play
         </filter>
     </defs>
     
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#sharpenTheImage)"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#sharpenTheImage)"></image>
 </svg>
 ```
 
@@ -299,7 +300,7 @@ So the full code would be:
           </filter>
     </defs>
     
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blendingTest)"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#blendingTest)"></image>
 </svg>
 ```
 
@@ -378,7 +379,7 @@ This gives us the code:
         </filter>
     </defs>
     
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#epicTriple)"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#epicTriple)"></image>
 </svg>
 ```
 
@@ -402,7 +403,7 @@ First, just desaturate the image completely to `0`. Easy-as. We've done this ab
         </filter>
     </defs>
     
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blackAndWhite)"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#blackAndWhite)"></image>
 </svg>
 ```
 
@@ -423,7 +424,7 @@ Secondly, we can use the more complex colourMatrix to control the RGB values tha
         </filter>
     </defs>
     
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blackAndWhiteRed)"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#blackAndWhiteRed)"></image>
 </svg>
 ```
 
@@ -444,7 +445,7 @@ We have the green channel:
         </filter>
     </defs>
     
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blackAndWhiteGreen)"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#blackAndWhiteGreen)"></image>
 </svg>
 ```
 
@@ -465,7 +466,7 @@ And the Blue Channel:
         </filter>
     </defs>
     
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blackAndWhiteBlue)"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#blackAndWhiteBlue)"></image>
 </svg>
 ```
 
@@ -585,7 +586,7 @@ Chaining the filters together is now as easy as pie:
   </filter>
   </defs>
     
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#aden)"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#aden)"></image>
 </svg>
 ```
 
@@ -678,7 +679,7 @@ Flood & Blend Mode Filter
         </filter>
     </defs>
     
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blackAndWhite)"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#blackAndWhite)"></image>
 </svg>
 ```
 
@@ -697,7 +698,7 @@ Simple Black & White Filter
         </filter>
     </defs>
     
-  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blackAndWhiteGreen)"></image>
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#blackAndWhiteGreen)"></image>
 </svg>
 ```
 
