@@ -4,6 +4,8 @@ date: "2022-06-21"
 title: "👨🏻‍🎨 SVG effects for Instagram-like photo editing adjustments"
 ---
 
+import bigben from "./bigben.jpg"
+
 Note, this article is going to try to be as simple as possible. I'm not going into the depths of SVG functions and elements... more just a reference on how to do specific things. It's a cobbled collection of information I've found from other people rather than any critical-thinking on my part. Check out the links for more in-depth info on each topic.
 
 TL;DR [Quick Reference is at the bottom of the page.](#-quick-reference)
@@ -63,6 +65,9 @@ Our base SVG will be this:
   <image xlink:href="bigben.jpg" width="1500" height="1000"></image>
 </svg>
 ```
+<svg viewBox="0 0 1500 1000">
+  <image xlinkHref={bigben} width="1500" height="1000"></image>
+</svg>
 
 I'm not going to bother with the `xmlns="http://www.w3.org/2000/svg"` and the `xmlns:xlink="http://www.w3.org/1999/xlink"` for now. I want to make this all as easy to read as possible.
 
@@ -119,8 +124,9 @@ So the code becomes:
         </filter>
     </defs>
     
-  <image xlinkHref={bigben.jpg} width="1500" height="1000" filter="url(#overSaturateThis)"></image>
+  <image xlinkHref={bigben} width="1500" height="1000" filter="url(#overSaturateThis)"></image>
 </svg>
+
 
 ---
 
@@ -157,6 +163,19 @@ Let's bring the brightness down by half (0.5) in this example.
   <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#lowerTheBrightness)"></image>
 </svg>
 ```
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="lowerTheBrightness">
+            <feComponentTransfer in="sourceGraphic">
+                <feFuncR type="linear" slope="0.5"/>
+                <feFuncG type="linear" slope="0.5"/>
+                <feFuncB type="linear" slope="0.5"/>
+            </feComponentTransfer>
+        </filter>
+    </defs>
+    
+  <image xlinkHref={bigben} width="1500" height="1000" filter="url(#lowerTheBrightness)"></image>
+</svg>
 
 ---
 
@@ -201,6 +220,19 @@ Plug it into the full code to effect the image and you've got this.
   <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#enhanceTheContrast)"></image>
 </svg>
 ```
+<svg viewBox="0 0 1500 1000">
+    <defs>
+    	<filter id="enhanceTheContrast">
+     		<feComponentTransfer in="sourceImage">
+                <feFuncR type="linear" slope="1.2" intercept="-0.1"/>
+                <feFuncG type="linear" slope="1.2" intercept="-0.1"/>
+                <feFuncB type="linear" slope="1.2" intercept="-0.1"/>
+           </feComponentTransfer>
+   		</filter>
+    </defs>
+    
+  <image xlinkHref={bigben} width="1500" height="1000" filter="url(#enhanceTheContrast)"></image>
+</svg>
 
 ---
 
@@ -234,6 +266,20 @@ Playing with the `-1` up and down can increase or decrease the sharpness. Play
   <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#sharpenTheImage)"></image>
 </svg>
 ```
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="sharpenTheImage">
+            <feConvolveMatrix 
+            	in="SourceGraphic" 
+                order="3" 
+                preserveAlpha="true" 
+                kernelMatrix="-1 0 0 0 4 0 0 0 -1"
+            />
+        </filter>
+    </defs>
+    
+  <image xlinkHref={bigben} width="1500" height="1000" filter="url(#sharpenTheImage)"></image>
+</svg>
 
 ---
 
@@ -313,6 +359,20 @@ So the full code would be:
   <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#blendingTest)"></image>
 </svg>
 ```
+<svg viewBox="0 0 1500 1000">
+    <defs>
+    	  <filter id="blendingTest">
+            	<feFlood 
+                	flood-color="#FF0000"
+                	flood-opacity="0.95"
+                	result="floodOut"
+            	></feFlood>
+            <feBlend mode="multiply" in="SourceGraphic" in2="floodOut"/>
+          </filter>
+    </defs>
+    
+  <image xlinkHref={bigben} width="1500" height="1000" filter="url(#blendingTest)"></image>
+</svg>
 
 ---
 
@@ -392,6 +452,17 @@ This gives us the code:
   <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#epicTriple)"></image>
 </svg>
 ```
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="epicTriple">
+            <feColorMatrix  in="SourceGraphic" type="saturate"  values="3" result="saturateOUT" />
+            <feColorMatrix  in="saturateOUT" type="hueRotate"  values="45" result="hueOUT" />
+            <feConvolveMatrix  in="hueOUT"  order="3"  preserveAlpha="true"  kernelMatrix="-1 0 0 0 4 0 0 0 -1" result="sharpenOUT" />
+        </filter>
+    </defs>
+    
+  <image xlinkHref={bigben} width="1500" height="1000" filter="url(#epicTriple)"></image>
+</svg>
 
 ---
 
@@ -416,6 +487,19 @@ First, just desaturate the image completely to `0`. Easy-as. We've done this ab
   <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#blackAndWhite)"></image>
 </svg>
 ```
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="blackAndWhite">
+            <feColorMatrix 
+            	type="saturate" 
+                in="SourceGraphic" 
+                values="0"
+            ></feColorMatrix>
+        </filter>
+    </defs>
+    
+  <image xlinkHref={bigben} width="1500" height="1000" filter="url(#blackAndWhite)"></image>
+</svg>
 
 Simple Black & White Filter
 
@@ -438,6 +522,21 @@ Secondly, we can use the more complex colourMatrix to control the RGB values tha
 </svg>
 ```
 
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="blackAndWhiteRed">
+        	<feColorMatrix type="matrix" values="
+                .33 0 0 0 0
+                .33 0 0 0 0
+                .33 0 0 0 0
+                 0  0 0 1 0">
+        	</feColorMatrix>
+        </filter>
+    </defs>
+    
+  <image xlinkHref={bigben} width="1500" height="1000" filter="url(#blackAndWhiteRed)"></image>
+</svg>
+
 Red-Channel B&W
 
 We have the green channel:
@@ -458,6 +557,20 @@ We have the green channel:
   <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#blackAndWhiteGreen)"></image>
 </svg>
 ```
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="blackAndWhiteGreen">
+        	<feColorMatrix type="matrix" values="
+                0 .33 0 0 0
+                0 .33 0 0 0
+                0 .33 0 0 0
+                0   0 0 1 0">
+        	</feColorMatrix>
+        </filter>
+    </defs>
+    
+  <image xlinkHref={bigben} width="1500" height="1000" filter="url(#blackAndWhiteGreen)"></image>
+</svg>
 
 Green Channel B&W
 
@@ -479,6 +592,20 @@ And the Blue Channel:
   <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#blackAndWhiteBlue)"></image>
 </svg>
 ```
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="blackAndWhiteBlue">
+        	<feColorMatrix type="matrix" values="
+                0 0 .33 0 0
+                0 0 .33 0 0
+                0 0 .33 0 0
+                0 0   0 1 0"
+            ></feColorMatrix>
+        </filter>
+    </defs>
+    
+  <image xlinkHref={bigben} width="1500" height="1000" filter="url(#blackAndWhiteBlue)"></image>
+</svg>
 
 Blue Channel B&W
 
@@ -602,7 +729,38 @@ Chaining the filters together is now as easy as pie:
 
 Which gives us this wonderful result:
 
-Original:
+<svg viewBox="0 0 1500 1000">
+    <defs>
+    <filter id="aden" filterUnits="objectBoundingBox">
+    
+    <feColorMatrix type="hueRotate" in="SourceGraphic" values="-20" result="hueRotateOut" />
+    
+    <feColorMatrix type="saturate" in="hueRotateOut" values="0.85" result="saturateOut" />
+    
+
+    <feComponentTransfer in="saturateOut" result="brightnessOut">
+        <feFuncR type="linear" slope="0.9"/>
+        <feFuncG type="linear" slope="0.9"/>
+        <feFuncB type="linear" slope="0.9"/>
+    </feComponentTransfer>
+
+    <feComponentTransfer in="brightnessOut" result="contrastOut">
+        <feFuncR type="linear" slope="1.2" intercept="0.05"/>
+        <feFuncG type="linear" slope="1.2" intercept="0.05"/>
+        <feFuncB type="linear" slope="1.2" intercept="0.05"/>
+    </feComponentTransfer>
+
+    <feFlood flood-color="#420A0E" flood-opacity="0.2" out="floodOut"  />
+
+    <feBlend mode="darken" in="contrastOut" in2="floodOut" result="blendOut" />
+
+    <feConvolveMatrix in="blendOut" order="3" preserveAlpha="true" kernelMatrix="-1 0 0 0 4 0 0 0 -1" result="sharpenOut" /> 
+
+  </filter>
+  </defs>
+    
+  <image xlinkHref={bigben} width="1500" height="1000" filter="url(#aden)"></image>
+</svg>
 
 Just for reference, all of her effects are here: [https://github.com/una/CSSgram/tree/master/source/scss](https://github.com/una/CSSgram/tree/master/source/scss)
 
@@ -713,3 +871,29 @@ Simple Black & White Filter
 ```
 
 Green Channel B&W
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="blackAndWhiteBlue">
+        	<feColorMatrix type="matrix" values="
+                0 0 .33 0 0
+                0 0 .33 0 0
+                0 0 .33 0 0
+                0 0   0 1 0">
+        	</feColorMatrix>
+        </filter>
+    </defs>
+    
+  <image xlink:href="bigben.jpg" width="1500" height="1000" filter="url(#blackAndWhiteBlue)"></image>
+</svg>
+```
+
+Blue Channel B&W
+
+## Finish
+
+As you can see, SVGs are wonderful at post-processing. Being able to add non-destructive filters onto an image will definitely be the future of image processing on the web.
+
+
+---
