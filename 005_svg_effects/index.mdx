@@ -1,0 +1,704 @@
+---
+slug: "/posts/svg_effects"
+date: "2022-06-21"
+title: "👨🏻‍🎨 SVG effects for Instagram-like photo editing adjustments"
+---
+
+
+Note, this article is going to try to be as simple as possible. I'm not going into the depths of SVG functions and elements... more just a reference on how to do specific things. It's a cobbled collection of information I've found from other people rather than any critical-thinking on my part. Check out the links for more in-depth info on each topic.
+
+TL;DR [Quick Reference is at the bottom of the page.](https://ioroot.herokuapp.com/svg-effects-for-instagram-like-filters/#-quick-reference)
+
+![](https://res-3.cloudinary.com/hvqqopet4/image/upload/q_auto/v1/ghost-blog-images/bigben_o.jpg)
+
+## Just some background info...
+
+There you are, developing away on your latest project and CSS is kicking ass. It's allowing you to do all of those cool blend-modes and effects but you want to combine it with some SVG goodness.
+
+This was what I was trying to achieve on my latest project for my company website [LondonParkour.com](https://londonparkour.com/)
+
+I essentially built a [WordPress plugin](https://github.com/IORoot/wp-plugin__generative-images) (It's super alpha stage - don't judge me) to build SVGs with a post image as a base. I could then layer effects and vector shapes over the top of the image and do whatever I liked with it. This gave me the flexibility to apply, in bulk, to any group of posts I wanted.
+
+The thinking was to have some generative-art part to it which creates random shapes and what-not, (you can see the results on the londonparkour.com [article section](https://londonparkour.com/article)), but I'm digressing...
+
+What I also wanted to achieve was Instagram-like adjustments to the images - in SVG. So that's what this article is all about - how to get those effects. I'll link to all of the posts I used to help me figure this all out too, but essentially, this is how to do the basics of image adjustments on bitmap images using SVG filters and shapes.
+
+Main Links of where I found this information are:
+
+-   [https://vanseodesign.com/css/filters-to-adjust-brightness-contrast-opacity-and-inversion/](https://vanseodesign.com/css/filters-to-adjust-brightness-contrast-opacity-and-inversion/)
+-   [https://una.im/CSSgram/](https://una.im/CSSgram/)
+-   [https://webplatform.github.io/docs/css/functions/hue-rotate/](https://webplatform.github.io/docs/css/functions/hue-rotate/)
+-   [https://yoksel.github.io/svg-gradient-map/#/](https://yoksel.github.io/svg-gradient-map/#/)
+-   [https://yoksel.github.io/svg-filters/#/](http://yoksel.github.io/svg-filters/#/)
+-   [https://github.com/jorgeatgu/fildrop/blob/master/demo.html](https://github.com/jorgeatgu/fildrop/blob/master/demo.html)
+-   [https://github.com/una/CSSgram/tree/master/source/scss](https://github.com/una/CSSgram/tree/master/source/scss)
+-   [https://pleeease.io/play/](http://pleeease.io/play/)
+-   [https://css-tricks.com/using-svg-to-create-a-duotone-image-effect/](https://css-tricks.com/using-svg-to-create-a-duotone-image-effect/)
+-   [https://tympanus.net/codrops/2019/02/05/svg-filter-effects-duotone-images-with-fecomponenttransfer/](https://tympanus.net/codrops/2019/02/05/svg-filter-effects-duotone-images-with-fecomponenttransfer/)
+-   [https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feFlood](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feFlood)
+-   [https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feComponentTransfer](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feComponentTransfer)
+-   [https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feColorMatrix](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feColorMatrix)
+
+Big thanks to all of these people and their efforts. I've just copied their hard work and tweaked it a little to do what I needed, these are the real innovators who figured out how the filters worked.
+
+## 🎛 The Adjustments
+
+-   [Saturation](https://ioroot.herokuapp.com/svg-effects-for-instagram-like-filters/#-saturation)
+-   [Brightness](https://ioroot.herokuapp.com/svg-effects-for-instagram-like-filters/#-brightness)
+-   [Contrast](https://ioroot.herokuapp.com/svg-effects-for-instagram-like-filters/#-contrast)
+-   [Sharpening](https://ioroot.herokuapp.com/svg-effects-for-instagram-like-filters/#-sharpening)
+-   [Hue rotation](https://ioroot.herokuapp.com/svg-effects-for-instagram-like-filters/#-hue-rotation)
+-   [Overlays & Blend modes](https://ioroot.herokuapp.com/svg-effects-for-instagram-like-filters/#-overlays-blending-modes)
+-   [Chaining filters](https://ioroot.herokuapp.com/svg-effects-for-instagram-like-filters/#-chaining-filters-together)
+-   [Black & White](https://ioroot.herokuapp.com/svg-effects-for-instagram-like-filters/#-black-white)
+-   [Instagram effects](https://ioroot.herokuapp.com/svg-effects-for-instagram-like-filters/#-instagram-effects)
+
+## 🏁 The beginning
+
+So, we need an image to start with. I'm going to use this one I took of Big Ben.
+
+Our base SVG will be this:
+
+```xml
+<svg viewBox="0 0 1500 1000">
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000"></image>
+</svg>
+```
+
+Base SVG
+
+I'm not going to bother with the `xmlns="http://www.w3.org/2000/svg"` and the `xmlns:xlink="http://www.w3.org/1999/xlink"` for now. I want to make this all as easy to read as possible.
+
+Which gives us this:
+
+Alright, let's get our mitts dirty. We need to define (as in, use the `<def></def>` tags) some filters to use on the image. So let's start with:
+
+---
+
+## 🎨 Saturation
+
+This is an easy one to get going with. The magic of saturation is this code:
+
+```xml
+<feColorMatrix 
+	type="saturate" 
+    in="SourceGraphic" 
+    values="3"
+ />
+```
+
+Saturation Filter
+
+Now, to use this code, we need to define a filter using the `<filter id="overSaturateThis"></filter>` tags with an ID to use. We then tell the image to use this filter. Pretty simple.
+
+The input is the `sourceGraphic` (the image) and we're just using a 'saturate' on the image. The value can be changed up or down from 1. 1 being no change. 3 is hugely oversaturated.
+
+So the code becomes:
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="overSaturateThis">
+            <feColorMatrix 
+            	type="saturate" 
+                in="SourceGraphic" 
+                values="3"
+            ></feColorMatrix>
+        </filter>
+    </defs>
+    
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#overSaturateThis)"></image>
+</svg>
+```
+
+---
+
+## 🌞 Brightness
+
+Brightness is slightly more complex, but not much. Essentially, we can fiddle with the Red, Green & Blue elements of the pixels to increase or decrease the brightness.
+
+```xml
+<feComponentTransfer in="sourceGraphic">
+    <feFuncR type="linear" slope="0.5"/>
+    <feFuncG type="linear" slope="0.5"/>
+    <feFuncB type="linear" slope="0.5"/>
+</feComponentTransfer>
+```
+
+Brightness filter
+
+You can see the `feFuncR` controls the Red, `feFuncG` the green and `feFuncB` the blue. The `slope` allows us to increase or decrease the brightness by giving a number lower or higher than 1.
+
+Let's bring the brightness down by half (0.5) in this example.
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="lowerTheBrightness">
+            <feComponentTransfer in="sourceGraphic">
+                <feFuncR type="linear" slope="0.5"/>
+                <feFuncG type="linear" slope="0.5"/>
+                <feFuncB type="linear" slope="0.5"/>
+            </feComponentTransfer>
+        </filter>
+    </defs>
+    
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#lowerTheBrightness)"></image>
+</svg>
+```
+
+---
+
+## ⬛️⬜️ Contrast
+
+Alright, this one requires a little maths... Nothing difficult though.
+
+Start with the amount of contrast you want to add / remove from the picture... let's say increase contrast to `1.2`
+
+Half the value : `0.6`
+
+Invert it : `-0.6`
+
+Add 0.5 onto it : `-0.1`
+
+And thats the calculated value you're going to use in the `intercept` part of the filter. The `slope` is the original contrast value you want to use.
+
+```xml
+  <feComponentTransfer in="sourceImage">
+      <feFuncR type="linear" slope="1.2" intercept="-0.1"/>
+      <feFuncG type="linear" slope="1.2" intercept="-0.1"/>
+      <feFuncB type="linear" slope="1.2" intercept="-0.1"/>
+  </feComponentTransfer>
+```
+
+Contrast Filter
+
+Plug it into the full code to effect the image and you've got this.
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+    	<filter id="enhanceTheContrast">
+     		<feComponentTransfer in="sourceImage">
+                <feFuncR type="linear" slope="1.2" intercept="-0.1"/>
+                <feFuncG type="linear" slope="1.2" intercept="-0.1"/>
+                <feFuncB type="linear" slope="1.2" intercept="-0.1"/>
+           </feComponentTransfer>
+   		</filter>
+    </defs>
+    
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#enhanceTheContrast)"></image>
+</svg>
+```
+
+---
+
+## 🔪 Sharpening
+
+Yeah! That's right. You can sharpen SVG images too. That's pretty bad-ass if you ask me.
+
+And it's another one liner to boot.
+
+```xml
+<feConvolveMatrix in="SourceGraphic" order="3" preserveAlpha="true" kernelMatrix="-1 0 0 0 4 0 0 0 -1"/>
+```
+
+Sharpening Filter
+
+Playing with the `-1` up and down can increase or decrease the sharpness. Play around with the numbers to see what you can come up with.
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="sharpenTheImage">
+            <feConvolveMatrix 
+            	in="SourceGraphic" 
+                order="3" 
+                preserveAlpha="true" 
+                kernelMatrix="-1 0 0 0 4 0 0 0 -1"
+            />
+        </filter>
+    </defs>
+    
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#sharpenTheImage)"></image>
+</svg>
+```
+
+---
+
+## 🟢 Hue Rotation
+
+Lets get funky in this mother... Rotate the hue to change the colours of the image. Very simple effect too.
+
+```xml
+<feColorMatrix type="hueRotate" in="SourceGraphic" values="45"/>
+```
+
+Hue Rotate Filter
+
+Define the `degrees` of the hue rotation with the `values`. Gives some funky results too.⠀
+
+---
+
+## 🟥 Overlays & Blending Modes
+
+OK, so we've gotten this far with just some simple filters. Now we need to add a couple more elements to achieve what we want. Again, I'm going to try to keep this as simple as possible.
+
+So, we want  two things this time.
+
+1.  A solid overlay of a particular colour.
+2.  A filter to blend the image and the solid overlay.
+
+Let's tackle the solid overlay. This is called a `Flood` filter effect.
+
+```xml
+  <filter id="blendingTest">
+    <feFlood 
+    	flood-color="#FF0000"
+        flood-opacity="0.9"
+        result="floodOut"
+    ></feFlood>
+  </filter>
+```
+
+Flood Filter
+
+The flood has a specific colour `#FF0000` in this instance. Notice is also has a `result` flag too. This is for chaining multiple filter effects together. One filter's `result` can be another's `in` or input.
+
+Just to add to the spice, we can also add flood-opacity too, which is a nice little addition to control the amount of the colour.
+
+Secondly, the blending of the `feFlood` and the `sourceGraphic` with a blend-mode.
+
+```xml
+  <filter id="blendingTest">
+    <feFlood 
+    	flood-color="#FF0000"
+        flood-opacity="0.0"
+        result="floodOut"
+    ></feFlood>
+    <feBlend mode="multiply" in="SourceGraphic" in2="floodOut"/>
+  </filter>
+```
+
+Blend Mode Added
+
+So now, we have two in's... `in` and `in2`. These are now blended together with the 'multiply' blend-mode.
+
+So the full code would be:
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+    	  <filter id="blendingTest">
+            	<feFlood 
+                	flood-color="#FF0000"
+                	flood-opacity="0.95"
+                	result="floodOut"
+            	></feFlood>
+            <feBlend mode="multiply" in="SourceGraphic" in2="floodOut"/>
+          </filter>
+    </defs>
+    
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blendingTest)"></image>
+</svg>
+```
+
+---
+
+## ⛓Chaining Filters Together
+
+You got a little taste in the previous 'overlay' example, but the crux is that you can chain multiple effects together to create one epic filter. To do this, you specify a `result` keyword that is then used on the `in` of the next one.
+
+So chaining three of the previous filters together should be easy. Let's put together:
+
+1.  Saturate
+2.  HueRotate
+3.  Sharpen
+
+```xml
+<filter id="epicTriple">
+    <feColorMatrix 
+    	in="SourceGraphic"
+        type="saturate" 
+        values="3"
+        result="saturateOUT"
+    />
+    
+    <feColorMatrix 
+        in="saturateOUT"
+    	type="hueRotate" 
+        values="45"
+        result="hueOUT"
+    />
+    
+    <feConvolveMatrix 
+    	in="hueOUT" 
+        order="3" 
+        preserveAlpha="true" 
+        kernelMatrix="-1 0 0 0 4 0 0 0 -1"
+        result="sharpenOUT"
+    />
+    
+</filter>
+```
+
+As you can see, I've labeled each effect `in` and `result` and chained them together.
+
+Image >>> saturateOUT >>> hueOUT >>> sharpenOUT
+
+This gives us the code:
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+    	  
+        <filter id="epicTriple">
+            <feColorMatrix 
+                in="SourceGraphic"
+                type="saturate" 
+                values="3"
+                result="saturateOUT"
+            />
+
+            <feColorMatrix 
+                in="saturateOUT"
+                type="hueRotate" 
+                values="45"
+                result="hueOUT"
+            />
+
+            <feConvolveMatrix 
+                in="hueOUT" 
+                order="3" 
+                preserveAlpha="true" 
+                kernelMatrix="-1 0 0 0 4 0 0 0 -1"
+                result="sharpenOUT"
+            />
+
+        </filter>
+    </defs>
+    
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#epicTriple)"></image>
+</svg>
+```
+
+---
+
+## 📓 Black & White
+
+Theres actually a bunch of ways to do this. I'll give you four here.
+
+First, just desaturate the image completely to `0`. Easy-as. We've done this above.
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="blackAndWhite">
+            <feColorMatrix 
+            	type="saturate" 
+                in="SourceGraphic" 
+                values="0"
+            ></feColorMatrix>
+        </filter>
+    </defs>
+    
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blackAndWhite)"></image>
+</svg>
+```
+
+Simple Black & White Filter
+
+Secondly, we can use the more complex colourMatrix to control the RGB values that make the image up. This is using the red channel to desaturate the image.
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="blackAndWhiteRed">
+        	<feColorMatrix type="matrix" values="
+                .33 0 0 0 0
+                .33 0 0 0 0
+                .33 0 0 0 0
+                 0  0 0 1 0">
+        	</feColorMatrix>
+        </filter>
+    </defs>
+    
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blackAndWhiteRed)"></image>
+</svg>
+```
+
+Red-Channel B&W
+
+We have the green channel:
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="blackAndWhiteGreen">
+        	<feColorMatrix type="matrix" values="
+                0 .33 0 0 0
+                0 .33 0 0 0
+                0 .33 0 0 0
+                0   0 0 1 0">
+        	</feColorMatrix>
+        </filter>
+    </defs>
+    
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blackAndWhiteGreen)"></image>
+</svg>
+```
+
+Green Channel B&W
+
+And the Blue Channel:
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="blackAndWhiteBlue">
+        	<feColorMatrix type="matrix" values="
+                0 0 .33 0 0
+                0 0 .33 0 0
+                0 0 .33 0 0
+                0 0   0 1 0">
+        	</feColorMatrix>
+        </filter>
+    </defs>
+    
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blackAndWhiteBlue)"></image>
+</svg>
+```
+
+Blue Channel B&W
+
+---
+
+## 🌁 Instagram Effects
+
+Take a look at [Una Kravets](https://twitter.com/una) fantastic work on [CSSGram](https://una.im/CSSgram/) so you can see what's possible with CSS and how she's recreated famous Instagram filters.
+
+Thanks to her generosity, we can take a look at the underlying SCSS code she used to make those effects on her github repository:
+
+Let's take a look at one of her effects and re-create it now using SVG filters:
+
+The 'aden' effect is right here: [https://github.com/una/CSSgram/blob/master/source/scss/aden.scss](https://github.com/una/CSSgram/blob/master/source/scss/aden.scss)
+
+[
+
+una/CSSgram
+
+CSS library for Instagram filters. Contribute to una/CSSgram development by creating an account on GitHub.
+
+![](https://github.githubassets.com/favicons/favicon.svg)GitHubuna
+
+![](https://avatars1.githubusercontent.com/u/1693164?s=400&v=4)
+
+](https://github.com/una/CSSgram)
+
+In it, you can see she used the following CSS filter:
+
+```scss
+@mixin aden($filters...) {
+  @include filter-base;
+  filter: 
+     hue-rotate(-20deg) 
+     contrast(.9) 
+     saturate(.85) 
+     brightness(1.2) 
+     $filters;
+
+  &::after {
+    background: 
+    linear-gradient(to right, rgba(66, 10, 14, .2), transparent);
+    mix-blend-mode: darken;
+  }
+
+  @content;
+}
+```
+
+Alright. A hue-rotate, contrast, saturate, brightness and a colour overlay with a 'darken' blend mode. With all our previous knowledge, I'm sure we can recreate that.
+
+I'm also going to add on a sneaky sharpen too - just for my own effect.
+
+Chaining the filters together is now as easy as pie:
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+    <filter id="aden" filterUnits="objectBoundingBox">
+    
+    <!-- HUE ROTATE -20deg -->
+    <feColorMatrix 
+    	type="hueRotate" 
+        in="SourceGraphic" 
+        values="-20"
+        result="hueRotateOut" 
+    />
+     
+    <!-- DESATURATE 0.85 -->
+    <feColorMatrix 
+    	type="saturate" 
+        in="hueRotateOut"  
+        values="0.85"
+        result="saturateOut"
+    />
+     
+    <!-- BRIGHTNESS 0.9 -->
+    <feComponentTransfer in="saturateOut" result="brightnessOut">
+        <feFuncR type="linear" slope="0.9"/>
+        <feFuncG type="linear" slope="0.9"/>
+        <feFuncB type="linear" slope="0.9"/>
+    </feComponentTransfer>
+
+    <!-- CONTRAST 1.2 -->
+    <feComponentTransfer in="brightnessOut" result="contrastOut">
+        <feFuncR type="linear" slope="1.2" intercept="0.05"/>
+        <feFuncG type="linear" slope="1.2" intercept="0.05"/>
+        <feFuncB type="linear" slope="1.2" intercept="0.05"/>
+    </feComponentTransfer>
+
+    <!-- FLOOD OVERLAY rgba(66, 10, 14, .2) -->
+    <feFlood 
+    	flood-color="#420A0E" 
+        flood-opacity="0.2" 
+        out="floodOut" 
+    />
+
+    <!-- BLEND FLOOD & CONTRASTOUT -->
+    <feBlend 
+    	mode="darken" 
+        in="contrastOut" 
+        in2="floodOut" 
+        result="blendOut"
+    />
+
+    <!-- SHARPEN -->
+    <feConvolveMatrix 
+    	in="blendOut"
+        order="3" 
+        preserveAlpha="true" 
+        kernelMatrix="-1 0 0 0 4 0 0 0 -1"
+        result="sharpenOut" 
+    />
+
+  </filter>
+  </defs>
+    
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#aden)"></image>
+</svg>
+```
+
+Which gives us this wonderful result:
+
+Original:
+
+Just for reference, all of her effects are here: [https://github.com/una/CSSgram/tree/master/source/scss](https://github.com/una/CSSgram/tree/master/source/scss)
+
+---
+
+## Final Thoughts
+
+During this little project I've really only brushed the surface of what's possible and I'm blown away by the power of SVG image manipulation.
+
+For the LondonParkour project I wrote the SVG data out into a file and then used Imagick and Inkscape to render out to a PNG and JPG. Now I can start generating images however I like with whatever effects and components I like.
+
+You can send me any questions you like over on my twitter account.
+
+[twitter.com/lonetraceur](https://twitter.com/lonetraceur)
+
+---
+
+## 📖 Quick Reference
+
+```xml
+<feColorMatrix 
+	type="saturate" 
+    in="SourceGraphic" 
+    values="3"
+ />
+```
+
+Saturation Filter
+
+```xml
+<feComponentTransfer in="sourceGraphic">
+    <feFuncR type="linear" slope="0.5"/>
+    <feFuncG type="linear" slope="0.5"/>
+    <feFuncB type="linear" slope="0.5"/>
+</feComponentTransfer>
+```
+
+Brightness filter
+
+```xml
+  <feComponentTransfer in="sourceImage">
+      <feFuncR type="linear" slope="1.2" intercept="-0.1"/>
+      <feFuncG type="linear" slope="1.2" intercept="-0.1"/>
+      <feFuncB type="linear" slope="1.2" intercept="-0.1"/>
+  </feComponentTransfer>
+```
+
+Contrast Filter
+
+```xml
+<feConvolveMatrix in="SourceGraphic" order="3" preserveAlpha="true" kernelMatrix="-1 0 0 0 4 0 0 0 -1"/>
+```
+
+Sharpening Filter
+
+```xml
+<feColorMatrix type="hueRotate" in="SourceGraphic" values="45"/>
+```
+
+Hue Rotate Filter
+
+```xml
+  <filter id="blendingTest">
+    <feFlood 
+    	flood-color="#FF0000"
+        flood-opacity="0.0"
+        result="floodOut"
+    ></feFlood>
+    <feBlend mode="multiply" in="SourceGraphic" in2="floodOut"/>
+  </filter>
+```
+
+Flood & Blend Mode Filter
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="blackAndWhite">
+            <feColorMatrix 
+            	type="saturate" 
+                in="SourceGraphic" 
+                values="0"
+            ></feColorMatrix>
+        </filter>
+    </defs>
+    
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blackAndWhite)"></image>
+</svg>
+```
+
+Simple Black & White Filter
+
+```xml
+<svg viewBox="0 0 1500 1000">
+    <defs>
+        <filter id="blackAndWhiteGreen">
+        	<feColorMatrix type="matrix" values="
+                0 .33 0 0 0
+                0 .33 0 0 0
+                0 .33 0 0 0
+                0   0 0 1 0">
+        	</feColorMatrix>
+        </filter>
+    </defs>
+    
+  <image xlink:href="/content/images/2020/12/bigben_o.jpg" width="1500" height="1000" filter="url(#blackAndWhiteGreen)"></image>
+</svg>
+```
+
+Green Channel B&W
