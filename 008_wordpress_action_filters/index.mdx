@@ -1,5 +1,5 @@
 ---
-slug: "/posts/wordpress-action-filters"
+slug: "/projects/wordpress-action-filters"
 date: "2022-06-22"
 title: "Wordpress Actions & Filters"
 icon:  "wordpress"
@@ -11,34 +11,91 @@ Curse the gods, this simple functionality can seem complicated. I think its a co
 
 Anyway, here's some pretty pictures instead. I've made it as basic as possible, more for remembering which one to use and where.
 
-## 🧗🏻‍♀️ Basic Actions
+## 🧗🏻‍♀️ Basic Actions (does a task, returns nothing)
 
-TL; DR : Plug in new code at a specific point.
+Plug in new code at a specific point.
 
-![](https://res-5.cloudinary.com/hvqqopet4/image/upload/q_auto/v1/ghost-blog-images/actions-1.svg)
 
-1.  Once you've registered your code, you're now 'hooked' into the action `'do_something_here'`  
+```mermaid
+flowchart TB
+
+    subgraph callback["Registered Callback Function"]
+        callback_function["run_this_function($args)"]
+    end
+
+    subgraph codeflow["Normal code flow"]
+        direction TB
+        code1["code"]
+        do_action["do_action( 'my_action_name', $arguments )"]
+        code2["code"]
+
+        code1 --> do_action
+        do_action --> code2
+    end
+
+    subgraph register["Registered Action"]
+        add_action["add_action( 'my_action_name', 'run_this_function', $priority, $number_of_args)"]
+    end
+
+    do_action --> register
+    register --> callback
+
+```
+
+
+1.  Once you've registered your action with a `my_action_name` in functions.php or a plugin, you can now call it. 
     
-2.  Whenever the code gets to the `do_action('do_something_here')`, it'll now run your function `'run_action_function'`.  
+2.  Whenever the code gets to a `do_action('my_action_name')`, it'll  run the associated callback function `run_this_function`.  
     
 3.  No need to return anything.
 
-## 🔍 Basic Filters
 
-TL;DR : Pass in a value, change the value, pass new value back.
+🔗 Action Links:
 
-![](https://res-3.cloudinary.com/hvqqopet4/image/upload/q_auto/v1/ghost-blog-images/filters.svg)
+[](https://developer.wordpress.org/reference/functions/do_action/)[https://developer.wordpress.org/reference/functions/do_action/](https://developer.wordpress.org/reference/functions/do_action/)
 
-1.  Once you've registered your code, you're now 'hooked' into the filter `'do_something_here'`.
-2.  Whenever the code gets to the `add_filter('run_a_filter_on')`, it'll now run your function `'run_filter_function'`.
-3.  Pass the old value `$value` into the function.
-4.  MUST return something (the new value).
+[](https://developer.wordpress.org/reference/functions/add_action/)[https://developer.wordpress.org/reference/functions/add_action/](https://developer.wordpress.org/reference/functions/add_action/)
 
-## Closing.
 
-Filters and actions have more arguments to them and are very versatile.
 
-I suggest you look at:
+## 🔍 Basic Filters (returns filtered data)
+
+Pass in a value, change the value, pass new value back.
+
+```mermaid
+flowchart TB
+
+    subgraph register["Registered Filter"]
+        add_filter["add_filter( 'my_filter_name', 'run_this_function', $priority, $number_of_args)"]
+    end
+
+    subgraph codeflow["Normal code flow"]
+        direction TB
+        code1["$value_to_be_filtered = 'Andrew'"]
+        apply_filters["$new_value = apply_filters( 'my_filter_name', $value_to_be_filtered, $arguments )"]
+        code2["echo $new_value"]
+
+        code1 --> apply_filters
+        apply_filters --> code2
+    end
+    
+
+    subgraph callback["Registered Callback Function"]
+        callback_function["run_this_function($value, $arguments){ return 'hi! '. $value; }"]
+    end
+
+
+    apply_filters --> register
+    register --> callback
+    callback --> apply_filters 
+
+```
+
+1. Registered your filter with an `add_filter` referencing a callback function.
+2. Run the filter with the `apply_filter` function.
+3. The callback function will take the passed value, change it and return it back. (filtering it)
+4. MUST return something (the new value).
+
 
 #### 🔗 Filter Links:
 
@@ -46,8 +103,3 @@ I suggest you look at:
 
 [](https://developer.wordpress.org/reference/functions/add_filter/)[https://developer.wordpress.org/reference/functions/add_filter/](https://developer.wordpress.org/reference/functions/add_filter/)
 
-🔗 Action Links:
-
-[](https://developer.wordpress.org/reference/functions/do_action/)[https://developer.wordpress.org/reference/functions/do_action/](https://developer.wordpress.org/reference/functions/do_action/)
-
-[](https://developer.wordpress.org/reference/functions/add_action/)[https://developer.wordpress.org/reference/functions/add_action/](https://developer.wordpress.org/reference/functions/add_action/)
