@@ -1,0 +1,140 @@
+---
+slug: "/posts/wordpress-ajax"
+date: "2022-06-22"
+title: "Wordpress AJAX"
+icon:  "wordpress"
+---
+
+# Wordpress AJAX
+
+In the slow process of trying to work out how to implement google OAUTH, I need to recap on AJAX.
+
+These are simple diagrams of the descriptions made on the official wordpress pages here:
+
+[https://codex.wordpress.org/AJAX_in_Plugins](https://codex.wordpress.org/AJAX_in_Plugins)
+
+## **1. Using inline JS within PHP.**
+
+![](./AJAX.jpg)
+
+### **1.1 Declare the Javascript in PHP**
+
+Step one is to embed the javascript that will run your AJAX call into the page that will run it. This is done with a wordpress action.
+
+```php
+add_action( 'admin_footer', 'my_action_javascript' );
+
+function my_action_javascript() { ?>
+	<script type="text/javascript" >
+    jQuery(document).ready(function($) {
+
+  	var data = {
+    	'action': 'my_action',
+    	'whatever': 1234
+  	};
+  
+  	// jQuery.post( url [,data ] [,success ] [,dataType ] )
+  	jQuery.post(ajaxurl, data, function(response) {
+    	alert('Got this from the server: ' + response);
+  	});
+
+	});
+	</script> <?php
+}
+```
+
+The `jQuery.post` will call the wordpress `admin-ajax.php` file (shortened to the global `ajaxurl` ).
+
+This will pass the `'action': 'my_action',` in the data. This is used to reference the correct backend function and will look for a function called `wp_ajax_my_action` to run.
+
+### **1.2 Declare the AJAX callback.**
+
+We need to create the function to run when the AJAX call is made. This is done through another add_action.
+
+```php
+add_action( 'wp_ajax_my_action', 'my_action' );
+
+function my_action() {
+	$whatever = intval( $_POST['whatever'] );
+	$whatever += 10;
+  echo $whatever;
+	wp_die(); // this is required to return a proper response
+}
+```
+
+### **The flow.**
+
+1.  JS added to footer.
+2.  When page loaded, JS will run.
+3.  JS will make AJAX call to `ajaxurl` with action `my_action`
+4.  Function `my_function` is tethered to the `wp_ajax_my_action` action.
+5.  The AJAX call will run `my_function` and return value.
+6.  Response is sent back to footer script.
+7.  Alertbox echos response value.
+
+## **2. Using Javascript Files.**
+
+![](./AJAX2.jpg)
+
+Using this method we can pass values TO the javascript file first.
+
+### **2.1 Enqueue Javascript**
+
+Create the Javascript file and enqueue it through an action function. (As you would any other JS file).
+
+```php
+add_action( 'admin_enqueue_scripts', 'my_enqueue' );
+
+function my_enqueue($hook) {
+    
+		wp_enqueue_script( 
+    	'ajax-script', 
+    	plugins_url( '/js/my_query.js', __FILE__ ),
+    	array('jquery') 
+  	);
+
+    // in JavaScript, object properties are accessed 
+  	// as ajax_object.ajax_url, ajax_object.we_value
+    $data = [
+        'ajax_url' => admin_url( 'admin-ajax.php' ), 
+        'we_value' => 1234 
+    ];
+  
+	wp_localize_script( 'ajax-script', 'ajax_object', $data );
+}
+```
+
+Secondly, we can use the `wp_localize_script` to pass values INTO the javascript.
+
+### **2.2. Write Javascript.**
+
+Once we've passed our data to the javascript, we can then use it.
+
+```php
+jQuery(document).ready(function($) {
+	var data = {
+		'action': 'my_action',
+		'whatever': ajax_object.we_value      
+     // We pass php values differently!
+	};
+	// We can also pass the url value separately 
+  // from ajaxurl for front end AJAX implementations
+	jQuery.post(ajax_object.ajax_url, data, function(response)
+  {
+		alert('Got this from the server: ' + response);
+	});
+});
+```
+
+The `ajax_object.we_value` and `ajax_object.ajax_url` contains the data passed to the javascript file from the PHP.
+
+### **Flow**
+
+1.  Action enqueues javascript file.
+2.  Data is passed with `wp_localize_script` function.
+3.  Javascript file is added to footer
+4.  Javascript uses localised data to fill it's data array.
+5.  The JS data array is sent to the callback url ALSO sent via php.
+6.  the callback processes as before and passes response back.
+7.  Alert is made on response.
+
