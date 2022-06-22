@@ -1,0 +1,53 @@
+---
+slug: "/posts/wordpress-action-filters"
+date: "2022-06-22"
+title: "Wordpress Actions & Filters"
+icon:  "wordpress"
+---
+# Wordpress Simple Actions & Filters
+
+
+Curse the gods, this simple functionality can seem complicated. I think its a combination of the terminology and word choice being so unhelpful. Do I `add` , `apply` or `do` a filter or action? What is a hook here? Or maybe I need to register it? It's all very vague, and I constantly forget.
+
+Anyway, here's some pretty pictures instead. I've made it as basic as possible, more for remembering which one to use and where.
+
+## 🧗🏻‍♀️ Basic Actions
+
+TL; DR : Plug in new code at a specific point.
+
+![](https://res-5.cloudinary.com/hvqqopet4/image/upload/q_auto/v1/ghost-blog-images/actions-1.svg)
+
+1.  Once you've registered your code, you're now 'hooked' into the action `'do_something_here'`  
+    
+2.  Whenever the code gets to the `do_action('do_something_here')`, it'll now run your function `'run_action_function'`.  
+    
+3.  No need to return anything.
+
+## 🔍 Basic Filters
+
+TL;DR : Pass in a value, change the value, pass new value back.
+
+![](https://res-3.cloudinary.com/hvqqopet4/image/upload/q_auto/v1/ghost-blog-images/filters.svg)
+
+1.  Once you've registered your code, you're now 'hooked' into the filter `'do_something_here'`.
+2.  Whenever the code gets to the `add_filter('run_a_filter_on')`, it'll now run your function `'run_filter_function'`.
+3.  Pass the old value `$value` into the function.
+4.  MUST return something (the new value).
+
+## Closing.
+
+Filters and actions have more arguments to them and are very versatile.
+
+I suggest you look at:
+
+#### 🔗 Filter Links:
+
+[](https://developer.wordpress.org/reference/functions/apply_filters/)[https://developer.wordpress.org/reference/functions/apply_filters/](https://developer.wordpress.org/reference/functions/apply_filters/)
+
+[](https://developer.wordpress.org/reference/functions/add_filter/)[https://developer.wordpress.org/reference/functions/add_filter/](https://developer.wordpress.org/reference/functions/add_filter/)
+
+🔗 Action Links:
+
+[](https://developer.wordpress.org/reference/functions/do_action/)[https://developer.wordpress.org/reference/functions/do_action/](https://developer.wordpress.org/reference/functions/do_action/)
+
+[](https://developer.wordpress.org/reference/functions/add_action/)[https://developer.wordpress.org/reference/functions/add_action/](https://developer.wordpress.org/reference/functions/add_action/)
