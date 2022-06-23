@@ -3,7 +3,7 @@
 # Loop JSON and get languages
 # -r for raw. (Removes quotes around strings)
 # capitalises the language also.
-jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .LANG + " " + .DATE + " " + .READ )' ./repos.json | while read name repo url lang date readme; do
+jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .DATE + " " + .READ + " " + .LANG)' ./repos.json | while read name repo url date readme lang; do
 
     echo "${name}"
 
@@ -13,9 +13,10 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .LANG + " " + .DATE + " " +
         mkdir -p ${name}
     fi
     
-    cd ${name}
+    cd $name
 
     # Download Readme
+    
     /usr/bin/curl -qs "${readme}" -O readme.md
 
     # Cleanup IMG tags

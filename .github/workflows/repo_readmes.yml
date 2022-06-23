@@ -32,8 +32,8 @@ jobs:
 
             # Cleanup
             # rm -f ./repos.json
-            # rm -f ./download_readmes.sh
-            # rm -f ./list_all_repos.sh
+            rm -f ./download_readmes.sh
+            rm -f ./list_all_repos.sh
 
       - name: Recommit all new Readmes
         run: |
@@ -50,10 +50,10 @@ jobs:
             git commit -m "GITHUB ACTION BOT - adding all repo readmes"
             git push origin master
 
-      # # DEBUG with NGROK.
-      - name: Start SSH session
-        uses: luchihoratiu/debug-via-ssh@main
-        with:
-          NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
-          SSH_PASS: ${{ secrets.NGROK_SSH_PASS }}
-          NGROK_REGION: eu
+      # DEBUG with NGROK.
+      # - name: Start SSH session
+      #   uses: luchihoratiu/debug-via-ssh@main
+      #   with:
+      #     NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+      #     SSH_PASS: ${{ secrets.NGROK_SSH_PASS }}
+      #     NGROK_REGION: eu
