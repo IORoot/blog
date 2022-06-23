@@ -31,7 +31,7 @@ jobs:
             ./download_readmes.sh
 
             # Cleanup
-            rm -f ./repos.json
+            # rm -f ./repos.json
             rm -f ./download_readmes.sh
             rm -f ./list_all_repos.sh
 
