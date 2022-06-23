@@ -42,7 +42,7 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .LANG + " " + .DATE + " " +
     else
         # Keep Frontmatter already set. 
         # May have been manually changed, so don't alter it.
-        head -n 8 index.mdx > frontmatter.md && mv frontmatter.md index.mdx
+        head -n 7 index.mdx > frontmatter.md && mv frontmatter.md index.mdx
         cat README.md >> index.mdx
     fi
 
@@ -56,7 +56,7 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .LANG + " " + .DATE + " " +
     fi
 
     # Clean up Readme.
-    rm README.md
+    # rm README.md
 
     ## Move back out of folder
     cd ..
