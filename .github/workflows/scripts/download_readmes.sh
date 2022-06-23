@@ -30,6 +30,7 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .LANG + " " + .DATE + " " +
 
         ## Prefix Frontmatter
         echo "---" > index.mdx
+        echo "repo: \"${url}\"" >> index.mdx
         echo "slug:  \"/projects/${name}\"" >> index.mdx
         echo "date:  \"$yyyymmdd\"" >> index.mdx
         echo "title: \"${name}\"" >> index.mdx
@@ -41,9 +42,17 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .LANG + " " + .DATE + " " +
     else
         # Keep Frontmatter already set. 
         # May have been manually changed, so don't alter it.
-        head -n 7 index.mdx > frontmatter.md && mv frontmatter.md index.mdx
+        head -n 8 index.mdx > frontmatter.md && mv frontmatter.md index.mdx
         cat README.md >> index.mdx
+    fi
 
+    ## Append the REPO if missing
+    REPO_FIELD=$(grep "^repo.*" index.mdx)
+    if [ -z "$REPO_FIELD" ]; then
+        echo "---"  > repo.mdx
+        echo "repo: \"${url}\"" >> repo.mdx
+        tail -n +2 index.mdx >> repo.mdx
+        mv -f repo.mdx index.mdx
     fi
 
     # Clean up Readme.
