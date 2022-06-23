@@ -57,7 +57,7 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .DATE + " " + .READ + " " +
     fi
 
     # Clean up Readme.
-    # rm README.md
+    rm README.md
 
     ## Move back out of folder
     cd ..
