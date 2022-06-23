@@ -515,7 +515,7 @@
   "NAME": "wp-plugin__cpt--blog",
   "REPO": "IORoot/wp-plugin__cpt--blog",
   "URL": "https://github.com/IORoot/wp-plugin__cpt--blog",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Custom Post Type - Blog",
   "DATE": "2021-02-04T16:22:52Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__cpt--blog/master/README.md"
