@@ -1,4 +1,5 @@
-name: Update Profile
+name: Update Netlify
+
 
 on:
   # push:
