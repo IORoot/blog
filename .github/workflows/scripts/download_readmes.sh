@@ -19,7 +19,7 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .LANG + " " + .DATE + " " +
     /usr/bin/curl -qs "${readme}" -O readme.md
 
     # Cleanup IMG tags
-    cat README.md | perl -pe 's|(<img.*?)>|$1/>|' > README_PERL.md && mv README_PERL.md README.md
+    cat README.md | perl -pe 's|(<img.*?)>|$1/>|' | perl -pe 's|//>|/>|' > README_PERL.md && mv README_PERL.md README.md
 
 
     ## File doesn't exist, so create it.
