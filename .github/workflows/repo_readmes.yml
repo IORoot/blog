@@ -1,0 +1,61 @@
+name: Update Profile
+
+on:
+
+  push:
+    branches:
+      - master
+
+  schedule:
+    - cron:  '0 1 * * *'
+    
+  workflow_dispatch:
+  
+  # ┌─────────────────────────────────────┐
+  # │          SECRETS REQUIRED           │
+  # └─────────────────────────────────────┘
+  # secrets.GITHUB_TOKEN
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+
+      - name: Run JSON Collector & Parser
+        run: |  
+
+            # Copy scripts here.
+            cp .github/workflows/scripts/*.sh ./
+            ls -la 
+
+            # Get a JSON file of all repos.
+            ./list_all_repos.sh
+            ls -la 
+      
+            # Download Readmes and create folders.
+            ./download_readmes.sh
+            ls -la 
+
+            # Cleanup
+            rm -f ./repos.json
+            ls -la 
+
+      - name: Recommit all new Readmes
+        run: |
+
+            # setup the username and email.
+            git config user.name "GitHub Actions Bot"
+            git config user.email "<>"
+
+      - name: commit
+        run: |
+
+            # Stage the file, commit and push
+            git add .
+            git commit -m "GITHUB ACTION BOT - adding all repo readmes"
+            git push origin master
