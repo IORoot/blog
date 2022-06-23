@@ -20,10 +20,17 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .LANG + " " + .DATE + " " +
     
         /usr/bin/curl -qs "${readme}" -O readme.md
         
+        ## convert date "2022-06-13T17:04:18Z" to "2022-06-13"
+        yyyymmdd=$(echo $date | cut -d 'T' -f 1)
+
+        # Cleanup <IMG> tags. (JSX doesn't like non-closing tags)
+        # Use Perl PCRE mode
+        cat README.md | perl -pe 's|(<img.*?)>|$1/>|' > README.md
+
         ## Prefix Frontmatter
         echo "---" > index.mdx
         echo "slug:  \"/projects/${name}\"" >> index.mdx
-        echo "date:  \"$date\"" >> index.mdx
+        echo "date:  \"$yyyymmdd\"" >> index.mdx
         echo "title: \"${name}\"" >> index.mdx
         echo "icon:  \"$lang\"" >> index.mdx
         echo "---" >> index.mdx

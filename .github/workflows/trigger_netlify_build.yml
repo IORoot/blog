@@ -1,9 +1,9 @@
 name: Update Profile
 
 on:
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
 
   workflow_dispatch:
 
@@ -15,4 +15,4 @@ jobs:
     steps:
       - name: Trigger Netlify Build
         run: |  
-            curl -X POST -d {} https://api.netlify.com/build_hooks/62b454407c9a310e317837a5
+            curl -X POST -d {} ${{secrets.NETLIFY_WEBHOOK}}
