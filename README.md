@@ -2,9 +2,9 @@
 
 These are all my projects and posts for IORoot.com
 
-# Github actions
+## Github actions
 
-## repo_readmes.yml
+### repo_readmes.yml
 
 This will go through all repos and rebuild all folders in this repo.
 
@@ -13,6 +13,10 @@ with different Icons, Titles, dates, etc...
 
 If you remove the folder, you'll get the default values back.
 
-## trigger_netlify_build.yml
+### trigger_netlify_build.yml
 
 This will trigger a rebuild of ioroot.com.
+
+## repos.json
+
+You'll see this file  in this repo. This is the generated files (from `repo_readmes.yml` action) that builds all the repos.
