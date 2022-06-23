@@ -16,10 +16,11 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .LANG + " " + .DATE + " " +
     cd ${name}
 
     # Download Readme
-    /usr/bin/curl -qs "${readme}" -O README.orig.md
+    /usr/bin/curl -qs "${readme}" -O readme.md
 
     # Cleanup IMG tags
-    cat README.orig.md | perl -pe 's|(<img.*?)>|$1/>|' > README.md
+    cat README.md | perl -pe 's|(<img.*?)>|$1/>|' > README_PERL.md && mv README_PERL.md README.md
+
 
     ## File doesn't exist, so create it.
     if [[ ! -f "./index.mdx" ]]; then
