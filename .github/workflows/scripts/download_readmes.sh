@@ -16,11 +16,10 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .LANG + " " + .DATE + " " +
     cd ${name}
 
     # Download Readme
-    /usr/bin/curl -qs "${readme}" -O readme.md
+    /usr/bin/curl -qs "${readme}" -O README.orig.md
 
     # Cleanup IMG tags
-    cat README.md | perl -pe 's|(<img.*?)>|$1/>|' > README_PERL.md && mv README_PERL.md README.md
-
+    cat README.orig.md | perl -pe 's|(<img.*?)>|$1/>|' > README.md
 
     ## File doesn't exist, so create it.
     if [[ ! -f "./index.mdx" ]]; then
@@ -42,13 +41,12 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .LANG + " " + .DATE + " " +
         # Keep Frontmatter already set. 
         # May have been manually changed, so don't alter it.
         head -n 7 index.mdx > frontmatter.md && mv frontmatter.md index.mdx
-        /usr/bin/curl -qs "${readme}" -O readme.md
         cat README.md >> index.mdx
 
     fi
 
     # Clean up Readme.
-    rm README.md
+    # rm README.md
 
     ## Move back out of folder
     cd ..
