@@ -2,9 +2,9 @@ name: Update Profile
 
 on:
 
-  # push:
-  #   branches:
-  #     - master
+  push:
+    branches:
+      - master
 
   schedule:
     - cron:  '0 1 * * *'
