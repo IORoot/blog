@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Username
-GHUSER=IOROOT;
-
 # Loop JSON and get languages
 # -r for raw. (Removes quotes around strings)
 # capitalises the language also.
