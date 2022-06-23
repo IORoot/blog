@@ -2,9 +2,9 @@ name: Update Profile
 
 on:
 
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
 
   schedule:
     - cron:  '0 1 * * *'
@@ -43,6 +43,8 @@ jobs:
 
             # Cleanup
             rm -f ./repos.json
+            rm -f ./download_readmes.sh
+            rm -f ./list_all_repos.sh
             ls -la 
 
       - name: Recommit all new Readmes

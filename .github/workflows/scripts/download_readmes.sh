@@ -5,6 +5,7 @@
 # capitalises the language also.
 jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .LANG + " " + .DATE + " " + .READ )' ./repos.json | while read name repo url lang date readme; do
 
+    echo "${name}"
     ## Make a directory
     mkdir -p ${name}
     
