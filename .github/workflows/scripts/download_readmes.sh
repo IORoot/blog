@@ -15,17 +15,18 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .LANG + " " + .DATE + " " +
     
     cd ${name}
 
+    # Download Readme
+    /usr/bin/curl -qs "${readme}" -O readme.md
+
+    # Cleanup IMG tags
+    cat README.md | perl -pe 's|(<img.*?)>|$1/>|' > README_PERL.md && mv README_PERL.md README.md
+
+
     ## File doesn't exist, so create it.
     if [[ ! -f "./index.mdx" ]]; then
     
-        /usr/bin/curl -qs "${readme}" -O readme.md
-        
         ## convert date "2022-06-13T17:04:18Z" to "2022-06-13"
         yyyymmdd=$(echo $date | cut -d 'T' -f 1)
-
-        # Cleanup <IMG> tags. (JSX doesn't like non-closing tags)
-        # Use Perl PCRE mode
-        cat README.md | perl -pe 's|(<img.*?)>|$1/>|' > README.md
 
         ## Prefix Frontmatter
         echo "---" > index.mdx
