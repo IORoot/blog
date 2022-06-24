@@ -43,13 +43,13 @@ jobs:
             echo ${{ secrets.GITHUB_TOKEN }} > /tmp/githubtoken
             cat /tmp/githubtoken
 
-      # DEBUG with NGROK.
-      - name: Start SSH session
-        uses: luchihoratiu/debug-via-ssh@main
-        with:
-          NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
-          SSH_PASS: ${{ secrets.NGROK_SSH_PASS }}
-          NGROK_REGION: eu
+      # # DEBUG with NGROK.
+      # - name: Start SSH session
+      #   uses: luchihoratiu/debug-via-ssh@main
+      #   with:
+      #     NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+      #     SSH_PASS: ${{ secrets.NGROK_SSH_PASS }}
+      #     NGROK_REGION: eu
 
 
       - name: Recommit all new Readmes
