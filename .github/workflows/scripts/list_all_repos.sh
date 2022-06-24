@@ -7,6 +7,9 @@ GHUSER=IOROOT;
 /usr/bin/curl "https://api.github.com/users/$GHUSER/repos?per_page=100&sort=created&direction=desc" | /usr/bin/jq '.[] | {NAME: .name, REPO: .full_name, URL: .html_url, LANG: ( "https://api.github.com/repos/" + .full_name + "/languages"), DESC: .description, DATE: .created_at, READ: ("https://raw.githubusercontent.com/" + .full_name + "/master/README.md") }  ' > ./repos.json
 /usr/bin/curl "https://api.github.com/users/$GHUSER/repos?per_page=100&page=2&sort=created&direction=desc" | /usr/bin/jq '.[] | {NAME: .name, REPO: .full_name, URL: .html_url, LANG: ( "https://api.github.com/repos/" + .full_name + "/languages") , DESC: .description, DATE: .created_at, READ: ("https://raw.githubusercontent.com/" + .full_name + "/master/README.md") }  ' >> ./repos.json
 
+if [ -z "{$GITHUB_TOKEN}" ]; then
+    exit 1
+fi
 
 # Loop JSON and get languages
 # -r for raw. (Removes quotes around strings)
