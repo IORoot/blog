@@ -18,7 +18,7 @@ jq -c -r '( .NAME + "~" + .REPO + "~" + .URL + "~" + .DATE + "~" + .READ + "~" +
     # echo "${readme}"
     # echo "${lang}"
     # echo "${desc}"
-    echo "${tags}"
+    # echo "${tags}"
 
     # Skip if already exists
     if [[ ! -f "./${name}" ]]; then
