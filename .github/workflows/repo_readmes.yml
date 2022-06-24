@@ -38,6 +38,7 @@ jobs:
             # rm -f ./repos.json
             rm -f ./download_readmes.sh
             rm -f ./list_all_repos.sh
+            rm -f ./languages.json
 
       # DEBUG with NGROK.
       - name: Start SSH session
