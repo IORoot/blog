@@ -25,7 +25,6 @@ jobs:
       - name: Run JSON Collector & Parser
         run: |  
 
- 
             # Copy scripts here.
             cp .github/workflows/scripts/*.sh ./
 
