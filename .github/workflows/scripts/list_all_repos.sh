@@ -19,7 +19,7 @@ jq -r '.LANG' ./repos.json | while read url; do
     cat languages.json
 
     main_language=$(cat languages.json | jq -r 'keys | last(.[])')
-    tags=$(cat languages.json | jq -c -r 'keys | . | @tsv')
+    tags="$(cat languages.json | jq -c -r 'keys | . | @tsv')"
 
     echo "lang: ${main_language}"
     echo "tags: ${tags}"
