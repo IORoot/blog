@@ -29,7 +29,7 @@ jobs:
             cp .github/workflows/scripts/*.sh ./
 
             # Get a JSON file of all repos.
-            ./list_all_repos.sh
+            ./list_all_repos.sh ${{ secrets.GITHUB_TOKEN }}
       
             # Download Readmes and create folders.
             ./download_readmes.sh
@@ -39,10 +39,10 @@ jobs:
             rm -f ./download_readmes.sh
             rm -f ./list_all_repos.sh
             rm -f ./languages.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-            echo ${{ secrets.GITHUB_TOKEN }} > /tmp/githubtoken
-            cat /tmp/githubtoken
-
+          
       # # DEBUG with NGROK.
       # - name: Start SSH session
       #   uses: luchihoratiu/debug-via-ssh@main
