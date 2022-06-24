@@ -524,7 +524,7 @@
   "NAME": "wp-plugin__taxonomy--extra",
   "REPO": "IORoot/wp-plugin__taxonomy--extra",
   "URL": "https://github.com/IORoot/wp-plugin__taxonomy--extra",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Extra ACF fields for taxonomies",
   "DATE": "2021-01-20T07:50:05Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__taxonomy--extra/master/README.md"
@@ -533,7 +533,7 @@
   "NAME": "wp-plugin__page-builder--isotope",
   "REPO": "IORoot/wp-plugin__page-builder--isotope",
   "URL": "https://github.com/IORoot/wp-plugin__page-builder--isotope",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Metafizzy Isotope grid module for page builder",
   "DATE": "2021-01-11T14:37:49Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__page-builder--isotope/master/README.md"
@@ -542,7 +542,7 @@
   "NAME": "wp-plugin__page-builder--flickity",
   "REPO": "IORoot/wp-plugin__page-builder--flickity",
   "URL": "https://github.com/IORoot/wp-plugin__page-builder--flickity",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Metafizzy Flickity slider module for page builder.",
   "DATE": "2021-01-11T14:36:05Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__page-builder--flickity/master/README.md"
@@ -551,7 +551,7 @@
   "NAME": "wp-plugin__page-builder",
   "REPO": "IORoot/wp-plugin__page-builder",
   "URL": "https://github.com/IORoot/wp-plugin__page-builder",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Custom Page Builder to replace WPBakery",
   "DATE": "2021-01-11T14:32:26Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__page-builder/master/README.md"
@@ -560,7 +560,7 @@
   "NAME": "wp-pluging__menu--code-inject",
   "REPO": "IORoot/wp-pluging__menu--code-inject",
   "URL": "https://github.com/IORoot/wp-pluging__menu--code-inject",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Inject any HTML code into the wordpress menu",
   "DATE": "2021-01-08T14:35:55Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-pluging__menu--code-inject/master/README.md"
@@ -569,7 +569,7 @@
   "NAME": "wp-plugin__admin-themes",
   "REPO": "IORoot/wp-plugin__admin-themes",
   "URL": "https://github.com/IORoot/wp-plugin__admin-themes",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Switch themes depending on website",
   "DATE": "2021-01-01T13:08:20Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__admin-themes/master/README.md"
@@ -578,7 +578,7 @@
   "NAME": "wp-plugin__andyp-plugins",
   "REPO": "IORoot/wp-plugin__andyp-plugins",
   "URL": "https://github.com/IORoot/wp-plugin__andyp-plugins",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "AndyP Plugin Manager",
   "DATE": "2020-12-26T10:39:18Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__andyp-plugins/master/README.md"
@@ -587,7 +587,7 @@
   "NAME": "github__actions--WP-workflow-example",
   "REPO": "IORoot/github__actions--WP-workflow-example",
   "URL": "https://github.com/IORoot/github__actions--WP-workflow-example",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "A Github Action workflow to run WordPress, PHPUnit, MySQL and pull in a second private repo",
   "DATE": "2020-11-30T10:44:02Z",
   "READ": "https://raw.githubusercontent.com/IORoot/github__actions--WP-workflow-example/master/README.md"
@@ -596,7 +596,7 @@
   "NAME": "wp-plugin__pipeline--exporter",
   "REPO": "IORoot/wp-plugin__pipeline--exporter",
   "URL": "https://github.com/IORoot/wp-plugin__pipeline--exporter",
-  "LANG": "message",
+  "LANG": "shell",
   "DESC": "Pipeline Project - Exporter",
   "DATE": "2020-10-06T08:14:38Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__pipeline--exporter/master/README.md"
@@ -605,7 +605,7 @@
   "NAME": "wp-plugin__oauth--GMB",
   "REPO": "IORoot/wp-plugin__oauth--GMB",
   "URL": "https://github.com/IORoot/wp-plugin__oauth--GMB",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Google-My-Business Plugin implementation ",
   "DATE": "2020-10-04T14:05:52Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__oauth--GMB/master/README.md"
@@ -614,7 +614,7 @@
   "NAME": "wp-plugin__oauth--YouTube",
   "REPO": "IORoot/wp-plugin__oauth--YouTube",
   "URL": "https://github.com/IORoot/wp-plugin__oauth--YouTube",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "oAuth implementation to separate away from Universal Exporter Plugin",
   "DATE": "2020-09-30T16:27:08Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__oauth--YouTube/master/README.md"
@@ -623,7 +623,7 @@
   "NAME": "wp-plugin__acf--codemirror",
   "REPO": "IORoot/wp-plugin__acf--codemirror",
   "URL": "https://github.com/IORoot/wp-plugin__acf--codemirror",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Embed codemirror textarea fields for ACF",
   "DATE": "2020-09-29T16:19:31Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__acf--codemirror/master/README.md"
@@ -632,7 +632,7 @@
   "NAME": "wp-plugin__ytdl",
   "REPO": "IORoot/wp-plugin__ytdl",
   "URL": "https://github.com/IORoot/wp-plugin__ytdl",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Youtube downloader for WordPress.",
   "DATE": "2020-09-20T13:44:37Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__ytdl/master/README.md"
@@ -641,7 +641,7 @@
   "NAME": "wp-plugin__oauth-demo",
   "REPO": "IORoot/wp-plugin__oauth-demo",
   "URL": "https://github.com/IORoot/wp-plugin__oauth-demo",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Demo of how to get google OAUTH working in wordpress.",
   "DATE": "2020-09-15T06:45:25Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__oauth-demo/master/README.md"
@@ -650,7 +650,7 @@
   "NAME": "wp-plugin__acf--inline-datetime-field",
   "REPO": "IORoot/wp-plugin__acf--inline-datetime-field",
   "URL": "https://github.com/IORoot/wp-plugin__acf--inline-datetime-field",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Renders the datetime picker inline rather than a popup.",
   "DATE": "2020-09-04T07:58:51Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__acf--inline-datetime-field/master/README.md"
@@ -659,7 +659,7 @@
   "NAME": "wp-plugin__pipeline--processor",
   "REPO": "IORoot/wp-plugin__pipeline--processor",
   "URL": "https://github.com/IORoot/wp-plugin__pipeline--processor",
-  "LANG": "message",
+  "LANG": "shell",
   "DESC": "Pipeline Processor to combine records. Part of the Pipeline Project",
   "DATE": "2020-08-16T15:09:13Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__pipeline--processor/master/README.md"
@@ -668,7 +668,7 @@
   "NAME": "wp-plugin__admin-widgets",
   "REPO": "IORoot/wp-plugin__admin-widgets",
   "URL": "https://github.com/IORoot/wp-plugin__admin-widgets",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Create admin widgets for the wordpress dashboard. Enables you to embed any code (including iframes) for Google Data studio embeds.",
   "DATE": "2020-08-16T13:22:27Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__admin-widgets/master/README.md"
@@ -677,7 +677,7 @@
   "NAME": "scripts__tools",
   "REPO": "IORoot/scripts__tools",
   "URL": "https://github.com/IORoot/scripts__tools",
-  "LANG": "message",
+  "LANG": "vim script",
   "DESC": "Library of BASH and CLI scripts",
   "DATE": "2020-08-12T08:58:28Z",
   "READ": "https://raw.githubusercontent.com/IORoot/scripts__tools/master/README.md"
@@ -686,7 +686,7 @@
   "NAME": "typora__notion-theme",
   "REPO": "IORoot/typora__notion-theme",
   "URL": "https://github.com/IORoot/typora__notion-theme",
-  "LANG": "message",
+  "LANG": "css",
   "DESC": "My customisations for Typora to look a little more like Notion.so ",
   "DATE": "2020-08-10T09:07:03Z",
   "READ": "https://raw.githubusercontent.com/IORoot/typora__notion-theme/master/README.md"
@@ -695,7 +695,7 @@
   "NAME": "wp-plugin__pulse--stack",
   "REPO": "IORoot/wp-plugin__pulse--stack",
   "URL": "https://github.com/IORoot/wp-plugin__pulse--stack",
-  "LANG": "message",
+  "LANG": "scss",
   "DESC": "Create an animated \"Stack\" of posts for homepage. Uses anime.js",
   "DATE": "2020-07-25T12:36:58Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__pulse--stack/master/README.md"
@@ -704,7 +704,7 @@
   "NAME": "wp-plugin__pulse-chips",
   "REPO": "IORoot/wp-plugin__pulse-chips",
   "URL": "https://github.com/IORoot/wp-plugin__pulse-chips",
-  "LANG": "message",
+  "LANG": "scss",
   "DESC": "\"Chips\" shortcode for the parkourpulse pages.",
   "DATE": "2020-07-18T11:34:54Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__pulse-chips/master/README.md"
@@ -713,7 +713,7 @@
   "NAME": "IORoot",
   "REPO": "IORoot/IORoot",
   "URL": "https://github.com/IORoot/IORoot",
-  "LANG": "message",
+  "LANG": "null",
   "DESC": "My Github profile with a github action that automatically creates a list of my repos.",
   "DATE": "2020-07-16T17:20:13Z",
   "READ": "https://raw.githubusercontent.com/IORoot/IORoot/master/README.md"
@@ -722,7 +722,7 @@
   "NAME": "scraper__instamancer",
   "REPO": "IORoot/scraper__instamancer",
   "URL": "https://github.com/IORoot/scraper__instamancer",
-  "LANG": "message",
+  "LANG": "typescript",
   "DESC": "Scrape Instagram's API with Puppeteer",
   "DATE": "2020-07-14T08:30:48Z",
   "READ": "https://raw.githubusercontent.com/IORoot/scraper__instamancer/master/README.md"
@@ -731,7 +731,7 @@
   "NAME": "visual-planner",
   "REPO": "IORoot/visual-planner",
   "URL": "https://github.com/IORoot/visual-planner",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Year-view wall planner for Google Calendar",
   "DATE": "2020-06-21T07:24:10Z",
   "READ": "https://raw.githubusercontent.com/IORoot/visual-planner/master/README.md"
@@ -740,7 +740,7 @@
   "NAME": "wp-plugin__acf-options-import-export",
   "REPO": "IORoot/wp-plugin__acf-options-import-export",
   "URL": "https://github.com/IORoot/wp-plugin__acf-options-import-export",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Allows you to import and export ACF options directly from the database. Caution, this is very dangerous!",
   "DATE": "2020-05-23T16:02:33Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__acf-options-import-export/master/README.md"
@@ -749,7 +749,7 @@
   "NAME": "wp-plugin__shortcode--modals",
   "REPO": "IORoot/wp-plugin__shortcode--modals",
   "URL": "https://github.com/IORoot/wp-plugin__shortcode--modals",
-  "LANG": "message",
+  "LANG": "scss",
   "DESC": "Creates simple CSS-Only modals",
   "DATE": "2020-05-18T13:56:40Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__shortcode--modals/master/README.md"
@@ -758,7 +758,7 @@
   "NAME": "wp-plugin__generative-images",
   "REPO": "IORoot/wp-plugin__generative-images",
   "URL": "https://github.com/IORoot/wp-plugin__generative-images",
-  "LANG": "message",
+  "LANG": "shell",
   "DESC": "Generate SVG images based on featured images.",
   "DATE": "2020-03-29T07:03:50Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__generative-images/master/README.md"
@@ -767,7 +767,7 @@
   "NAME": "wp-plugin__regex-posts",
   "REPO": "IORoot/wp-plugin__regex-posts",
   "URL": "https://github.com/IORoot/wp-plugin__regex-posts",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Apply a regex to any post type and field. Test, Single ID or Bulk all posts of type.",
   "DATE": "2020-02-07T19:18:32Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__regex-posts/master/README.md"
@@ -776,7 +776,7 @@
   "NAME": "wp-plugin__advanced-forms--replyto",
   "REPO": "IORoot/wp-plugin__advanced-forms--replyto",
   "URL": "https://github.com/IORoot/wp-plugin__advanced-forms--replyto",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Add a 'reply-to' header into the advanced-forms (hookturn.io) plugin.",
   "DATE": "2019-12-20T11:32:03Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__advanced-forms--replyto/master/README.md"
@@ -785,7 +785,7 @@
   "NAME": "pagespeed__lighthouse-viewer",
   "REPO": "IORoot/pagespeed__lighthouse-viewer",
   "URL": "https://github.com/IORoot/pagespeed__lighthouse-viewer",
-  "LANG": "message",
+  "LANG": "javascript",
   "DESC": "Custom Lighthouse-viewer to read a Pagespeed Insights API JSON response file specified on URL path",
   "DATE": "2019-12-13T13:08:20Z",
   "READ": "https://raw.githubusercontent.com/IORoot/pagespeed__lighthouse-viewer/master/README.md"
@@ -794,7 +794,7 @@
   "NAME": "wp-plugin__menus--responsive",
   "REPO": "IORoot/wp-plugin__menus--responsive",
   "URL": "https://github.com/IORoot/wp-plugin__menus--responsive",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Changes a wordpress dynamic sidebar menu into a responsive dropdown select menu",
   "DATE": "2019-11-11T19:25:32Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__menus--responsive/master/README.md"
@@ -803,7 +803,7 @@
   "NAME": "prometheus__grok--apache2",
   "REPO": "IORoot/prometheus__grok--apache2",
   "URL": "https://github.com/IORoot/prometheus__grok--apache2",
-  "LANG": "message",
+  "LANG": "shell",
   "DESC": "Grok_exporter yaml config files for Apache2 access and error logs. For use with Prometheus.",
   "DATE": "2019-10-29T18:44:09Z",
   "READ": "https://raw.githubusercontent.com/IORoot/prometheus__grok--apache2/master/README.md"
@@ -812,7 +812,7 @@
   "NAME": "wp-plugin__admin--remove-comments",
   "REPO": "IORoot/wp-plugin__admin--remove-comments",
   "URL": "https://github.com/IORoot/wp-plugin__admin--remove-comments",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Removes the Wordpress 'Comments' menu.",
   "DATE": "2019-10-28T16:45:37Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__admin--remove-comments/master/README.md"
@@ -821,7 +821,7 @@
   "NAME": "wp-plugin__auto-menu",
   "REPO": "IORoot/wp-plugin__auto-menu",
   "URL": "https://github.com/IORoot/wp-plugin__auto-menu",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Adds posts of a selected category to a menu automatically.",
   "DATE": "2019-10-28T16:42:32Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__auto-menu/master/README.md"
@@ -830,7 +830,7 @@
   "NAME": "wp-plugin__api-scraper",
   "REPO": "IORoot/wp-plugin__api-scraper",
   "URL": "https://github.com/IORoot/wp-plugin__api-scraper",
-  "LANG": "message",
+  "LANG": "shell",
   "DESC": "API Scraper Wordpress plugin that will allow you to get data from YouTube and output the results as you like.",
   "DATE": "2019-10-28T16:39:44Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__api-scraper/master/README.md"
@@ -839,7 +839,7 @@
   "NAME": "wp-plugin__footer",
   "REPO": "IORoot/wp-plugin__footer",
   "URL": "https://github.com/IORoot/wp-plugin__footer",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "ACF options panel to allow you to select a specific page for your footer.",
   "DATE": "2019-10-28T16:37:36Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__footer/master/README.md"
@@ -848,7 +848,7 @@
   "NAME": "wp-theme__londonparkour--v4",
   "REPO": "IORoot/wp-theme__londonparkour--v4",
   "URL": "https://github.com/IORoot/wp-theme__londonparkour--v4",
-  "LANG": "message",
+  "LANG": "scss",
   "DESC": "Wordpress theme for LondonParkour. Uses _underscores.",
   "DATE": "2019-10-28T15:24:23Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-theme__londonparkour--v4/master/README.md"
@@ -857,7 +857,7 @@
   "NAME": "zurb__newsletter--londonparkour",
   "REPO": "IORoot/zurb__newsletter--londonparkour",
   "URL": "https://github.com/IORoot/zurb__newsletter--londonparkour",
-  "LANG": "message",
+  "LANG": "javascript",
   "DESC": "Zurb Framework Newsletter creator.",
   "DATE": "2018-10-11T12:47:00Z",
   "READ": "https://raw.githubusercontent.com/IORoot/zurb__newsletter--londonparkour/master/README.md"
