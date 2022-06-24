@@ -15,7 +15,7 @@ PAT=$1;
 jq -r '.LANG' ./repos.json | while read url; do
     /usr/bin/curl -u ${GHUSER}:${PAT} -s "${url}" > languages.json
     main_language=$(cat languages.json | jq -r 'keys | last(.[])')
-    tags=$(cat languages.json | jq 'keys | . | @sh ')
+    tags=$(cat languages.json | jq -c -r 'keys | . | @sh ')
     echo $tags
     lowercased=${main_language,,}
     sed -i "s|${url}|${lowercased}|g" ./repos.json
