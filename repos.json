@@ -73,7 +73,7 @@
   "REPO": "IORoot/latestversions-website",
   "URL": "https://github.com/IORoot/latestversions-website",
   "LANG": "javascript",
-  "DESC": null,
+  "DESC": "LatestVersions Website",
   "DATE": "2022-05-18T07:36:13Z",
   "TAGS": """",
   "READ": "https://raw.githubusercontent.com/IORoot/latestversions-website/master/README.md"
@@ -123,7 +123,7 @@
   "REPO": "IORoot/latestversions-scraper",
   "URL": "https://github.com/IORoot/latestversions-scraper",
   "LANG": "javascript",
-  "DESC": null,
+  "DESC": "LatestVersions Scraper",
   "DATE": "2021-10-28T17:39:11Z",
   "TAGS": """",
   "READ": "https://raw.githubusercontent.com/IORoot/latestversions-scraper/master/README.md"
