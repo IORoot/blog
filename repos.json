@@ -5,7 +5,7 @@
   "LANG": "null",
   "DESC": "Github Action to scrape a website, make a static version and push to netlify.",
   "DATE": "2022-06-24T15:00:00Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/github__action--scrapesite-netlify/master/README.md"
 }
 {
@@ -15,7 +15,7 @@
   "LANG": "shell",
   "DESC": "🖼️  A command-line system information tool written in bash 3.2+",
   "DATE": "2022-06-20T17:10:22Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/neofetch/master/README.md"
 }
 {
@@ -25,7 +25,7 @@
   "LANG": "javascript",
   "DESC": "Community plugins list, theme list, and releases of Obsidian.",
   "DATE": "2022-06-13T17:04:18Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/obsidian-releases/master/README.md"
 }
 {
@@ -35,7 +35,7 @@
   "LANG": "css",
   "DESC": "A (very) clean and minimal Monokai code-colours based Obsidian theme.",
   "DATE": "2022-06-13T12:44:29Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/Obsidian-Monokai/master/README.md"
 }
 {
@@ -45,7 +45,7 @@
   "LANG": "javascript",
   "DESC": "Gatsby Website for IORoot.com",
   "DATE": "2022-06-12T14:11:42Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/IORoot-Website/master/README.md"
 }
 {
@@ -55,7 +55,7 @@
   "LANG": "javascript",
   "DESC": "A simple tool to convert an SVG into different formats, ready for use in CSS and HTML.",
   "DATE": "2022-06-05T07:15:18Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/SVGencode/master/README.md"
 }
 {
@@ -65,7 +65,7 @@
   "LANG": "null",
   "DESC": "Markdown content for gatsby",
   "DATE": "2022-05-20T10:25:35Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/blog/master/README.md"
 }
 {
@@ -75,7 +75,7 @@
   "LANG": "javascript",
   "DESC": "LatestVersions Website",
   "DATE": "2022-05-18T07:36:13Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/latestversions-website/master/README.md"
 }
 {
@@ -85,7 +85,7 @@
   "LANG": "php",
   "DESC": "Simple button for logging in and logging out of the wordpress site.",
   "DATE": "2022-02-20T18:21:29Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__memberpress--login-logout/master/README.md"
 }
 {
@@ -95,7 +95,7 @@
   "LANG": "php",
   "DESC": "Wordpress sidebar menu from taxonomy",
   "DATE": "2022-01-20T09:07:49Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__sidebar-menu/master/README.md"
 }
 {
@@ -105,7 +105,7 @@
   "LANG": "shell",
   "DESC": "Syllabus website theme",
   "DATE": "2022-01-18T09:38:55Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-theme__syllabus-v1/master/README.md"
 }
 {
@@ -115,7 +115,7 @@
   "LANG": "php",
   "DESC": "Custom Post-Type for the syllabus pages.",
   "DATE": "2021-11-19T08:34:00Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__cpt--syllabus/master/README.md"
 }
 {
@@ -125,7 +125,7 @@
   "LANG": "javascript",
   "DESC": "LatestVersions Scraper",
   "DATE": "2021-10-28T17:39:11Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/latestversions-scraper/master/README.md"
 }
 {
@@ -135,7 +135,7 @@
   "LANG": "scss",
   "DESC": "Generic REST request with a view output of images in an isometic format.",
   "DATE": "2021-10-26T10:17:35Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__rest--isometric/master/README.md"
 }
 {
@@ -145,7 +145,7 @@
   "LANG": "php",
   "DESC": "EpicSlider for Wordpress PageBuilder",
   "DATE": "2021-10-11T15:25:25Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__page-builder--epic-slider/master/README.md"
 }
 {
@@ -155,7 +155,7 @@
   "LANG": "php",
   "DESC": "Example PHP scripts for Google My Business API v4.9",
   "DATE": "2021-09-28T16:00:34Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/examples__google-my-business/master/README.md"
 }
 {
@@ -165,7 +165,7 @@
   "LANG": "php",
   "DESC": "ParkourPulse Theme.",
   "DATE": "2021-09-09T11:58:25Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-theme__pulse/master/README.md"
 }
 {
@@ -175,7 +175,7 @@
   "LANG": "html",
   "DESC": "Runs Lighthouse against URLs - Saves to server.",
   "DATE": "2021-09-03T10:04:46Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/run__lighthouse/master/README.md"
 }
 {
@@ -185,7 +185,7 @@
   "LANG": "shell",
   "DESC": "PULSE website deploy through CI",
   "DATE": "2021-08-23T11:54:43Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/deploy__PULSE/master/README.md"
 }
 {
@@ -195,7 +195,7 @@
   "LANG": "javascript",
   "DESC": "Run a puppeteer script to schedule a video on later.com",
   "DATE": "2021-08-17T16:25:37Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/workflow__puppeteer--later.com/master/README.md"
 }
 {
@@ -205,7 +205,7 @@
   "LANG": "shell",
   "DESC": "Github Action to run puppeteer with media/video capabilities. (Default downloaded chrome cannot use video files)",
   "DATE": "2021-08-17T09:48:41Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/action__puppeteer--media/master/README.md"
 }
 {
@@ -215,7 +215,7 @@
   "LANG": "javascript",
   "DESC": "Run Puppeteer scripts through github actions",
   "DATE": "2021-08-15T11:19:00Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/workflow__puppeteer--demo/master/README.md"
 }
 {
@@ -225,7 +225,7 @@
   "LANG": "null",
   "DESC": "Exporter Project for LondonParkour",
   "DATE": "2021-08-10T09:50:07Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/deploy__EXPORTER/master/README.md"
 }
 {
@@ -235,7 +235,7 @@
   "LANG": "rich text format",
   "DESC": "🌈 Colour Palette .JSON to Apple .CLR converter.",
   "DATE": "2021-07-18T11:00:03Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/macos__json2clr--convert/master/README.md"
 }
 {
@@ -245,7 +245,7 @@
   "LANG": "rich text format",
   "DESC": "🌈 Apple MacOS Colorpicker Panel shortcut",
   "DATE": "2021-07-18T10:42:28Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/macos__colorpicker--app/master/README.md"
 }
 {
@@ -255,7 +255,7 @@
   "LANG": "null",
   "DESC": "🌈 MacOS Color Palettes in Apple .CLR and .JSON formats. TailwindCSS, MaterialDesign, Bootstrap, W3C, Primer to Copic, Pantone and Crayola.",
   "DATE": "2021-07-18T10:36:08Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/macos__colorpicker--palettes/master/README.md"
 }
 {
@@ -265,7 +265,7 @@
   "LANG": "vue",
   "DESC": "This is where all the repos, code and projects I've written over the years that I no longer use lives.",
   "DATE": "2021-06-22T14:41:44Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/archive__dead-projects/master/README.md"
 }
 {
@@ -275,7 +275,7 @@
   "LANG": "null",
   "DESC": "The image uploads folder for labs.londonparkour.com",
   "DATE": "2021-06-18T16:42:40Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/uploads__labs/master/README.md"
 }
 {
@@ -285,7 +285,7 @@
   "LANG": "shell",
   "DESC": "The LABS website theme. Labs.londonparkour.com",
   "DATE": "2021-06-18T07:50:10Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-theme__labs-londonparkour/master/README.md"
 }
 {
@@ -295,7 +295,7 @@
   "LANG": "shell",
   "DESC": "labs.londonparkour.com deployment",
   "DATE": "2021-06-16T07:02:46Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/deploy__LABS/master/README.md"
 }
 {
@@ -305,7 +305,7 @@
   "LANG": "php",
   "DESC": "ParkourLabs - Builds a 3-level hierarchical structure based off categories and posts.",
   "DATE": "2021-06-04T09:59:35Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__shortcode--tree/master/README.md"
 }
 {
@@ -315,7 +315,7 @@
   "LANG": "javascript",
   "DESC": "🌬 A tailwind variant that allows you to select every X children of Y children.",
   "DATE": "2021-05-30T11:08:38Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/tailwind__variant--on/master/README.md"
 }
 {
@@ -325,7 +325,7 @@
   "LANG": "php",
   "DESC": "Obtain a random image URL based off a supplied list of image IDs",
   "DATE": "2021-05-29T11:49:44Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__shortcode--random-image-url/master/README.md"
 }
 {
@@ -335,7 +335,7 @@
   "LANG": "php",
   "DESC": "Allows you to obtain posts from wordpress and supply a template to apply to all retrieved results.",
   "DATE": "2021-05-29T11:48:05Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__shortcode--fetch/master/README.md"
 }
 {
@@ -345,7 +345,7 @@
   "LANG": "php",
   "DESC": "Various small snippet facts on various entities within wordpress",
   "DATE": "2021-05-29T11:46:36Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__shortcode--facts/master/README.md"
 }
 {
@@ -355,7 +355,7 @@
   "LANG": "php",
   "DESC": "Adds breadcrumbs with CSS Accordion drop-downs.",
   "DATE": "2021-05-29T11:44:48Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__shortcode--breadcrumbs/master/README.md"
 }
 {
@@ -365,7 +365,7 @@
   "LANG": "html",
   "DESC": "Send to Netlify, from the testing github-action on STAGING.",
   "DATE": "2021-04-26T10:54:42Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/github__pages--Lighthouse-Results/master/README.md"
 }
 {
@@ -375,7 +375,7 @@
   "LANG": "php",
   "DESC": "CPT Support",
   "DATE": "2021-04-23T10:14:49Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__cpt--support/master/README.md"
 }
 {
@@ -385,7 +385,7 @@
   "LANG": "php",
   "DESC": "AMP Pages",
   "DATE": "2021-04-20T12:05:17Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__cpt--amp/master/README.md"
 }
 {
@@ -395,7 +395,7 @@
   "LANG": "php",
   "DESC": "Page builder rawcode",
   "DATE": "2021-04-12T14:03:37Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__page-builder--rawcode/master/README.md"
 }
 {
@@ -405,7 +405,7 @@
   "LANG": "php",
   "DESC": "Random Hero generator for page builder",
   "DATE": "2021-04-12T13:28:49Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__page-builder--hero/master/README.md"
 }
 {
@@ -415,7 +415,7 @@
   "LANG": "shell",
   "DESC": "Version5 Of LondonParkour",
   "DATE": "2021-04-12T12:55:30Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-theme__londonparkour--v5/master/README.md"
 }
 {
@@ -425,7 +425,7 @@
   "LANG": "null",
   "DESC": "All the londonparkour.com image uploads so we can use CI",
   "DATE": "2021-04-12T10:18:02Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/uploads__londonparkour/master/README.md"
 }
 {
@@ -435,7 +435,7 @@
   "LANG": "php",
   "DESC": "Shortcode for creating a responsive picture tag for images.",
   "DATE": "2021-04-11T17:02:37Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__shortcode--picture/master/README.md"
 }
 {
@@ -445,7 +445,7 @@
   "LANG": "shell",
   "DESC": "LondonParkour Staging wp-content, theme, plugins.",
   "DATE": "2021-04-07T15:04:57Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/deploy__STAGING/master/README.md"
 }
 {
@@ -455,7 +455,7 @@
   "LANG": "php",
   "DESC": "Page builder addon for video rotator",
   "DATE": "2021-04-06T13:10:09Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__page-builder--video-rotator/master/README.md"
 }
 {
@@ -465,7 +465,7 @@
   "LANG": "php",
   "DESC": "Stripe payment customisations",
   "DATE": "2021-04-06T13:08:55Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__stripe-payments/master/README.md"
 }
 {
@@ -475,7 +475,7 @@
   "LANG": "php",
   "DESC": "Google Calendar to Wordpress sync",
   "DATE": "2021-04-02T07:41:20Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__gcal-sync/master/README.md"
 }
 {
@@ -485,7 +485,7 @@
   "LANG": "php",
   "DESC": "Events CPT to add synced gCal events to.",
   "DATE": "2021-03-08T13:45:20Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__cpt--events/master/README.md"
 }
 {
@@ -495,7 +495,7 @@
   "LANG": "php",
   "DESC": "ACF oAuth for google Calendar",
   "DATE": "2021-03-06T07:59:26Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__oauth--gCAL/master/README.md"
 }
 {
@@ -505,7 +505,7 @@
   "LANG": "scss",
   "DESC": "REST Interface to Labs.londonparkour.com",
   "DATE": "2021-03-04T07:52:06Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__REST--labs/master/README.md"
 }
 {
@@ -515,7 +515,7 @@
   "LANG": "php",
   "DESC": "Custom Post Type for Pulse",
   "DATE": "2021-02-14T14:00:11Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__cpt--pulse/master/README.md"
 }
 {
@@ -525,7 +525,7 @@
   "LANG": "php",
   "DESC": "Creates subdirectories in the uploads folder for each thumbnail size",
   "DATE": "2021-02-11T11:33:22Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__thumbnail-folders/master/README.md"
 }
 {
@@ -535,7 +535,7 @@
   "LANG": "php",
   "DESC": "Custom Theme Structuring for Wordpress",
   "DATE": "2021-02-04T16:26:52Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__theme--custom-structure/master/README.md"
 }
 {
@@ -545,7 +545,7 @@
   "LANG": "php",
   "DESC": "Custom Post Type - Tutorials",
   "DATE": "2021-02-04T16:25:33Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__cpt--tutorial/master/README.md"
 }
 {
@@ -555,7 +555,7 @@
   "LANG": "php",
   "DESC": "Custom Post Type - Demonstration",
   "DATE": "2021-02-04T16:24:08Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__cpt--demonstration/master/README.md"
 }
 {
@@ -565,7 +565,7 @@
   "LANG": "php",
   "DESC": "Custom Post Type - Blog",
   "DATE": "2021-02-04T16:22:52Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__cpt--blog/master/README.md"
 }
 {
@@ -575,7 +575,7 @@
   "LANG": "php",
   "DESC": "Adds YouTube Lite into the Page Builder",
   "DATE": "2021-01-20T07:53:40Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__page-builder--yt-lite/master/README.md"
 }
 {
@@ -585,7 +585,7 @@
   "LANG": "php",
   "DESC": "Extra ACF fields for taxonomies",
   "DATE": "2021-01-20T07:50:05Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__taxonomy--extra/master/README.md"
 }
 {
@@ -595,7 +595,7 @@
   "LANG": "php",
   "DESC": "Metafizzy Isotope grid module for page builder",
   "DATE": "2021-01-11T14:37:49Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__page-builder--isotope/master/README.md"
 }
 {
@@ -605,7 +605,7 @@
   "LANG": "php",
   "DESC": "Metafizzy Flickity slider module for page builder.",
   "DATE": "2021-01-11T14:36:05Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__page-builder--flickity/master/README.md"
 }
 {
@@ -615,7 +615,7 @@
   "LANG": "php",
   "DESC": "Custom Page Builder to replace WPBakery",
   "DATE": "2021-01-11T14:32:26Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__page-builder/master/README.md"
 }
 {
@@ -625,7 +625,7 @@
   "LANG": "php",
   "DESC": "Inject any HTML code into the wordpress menu",
   "DATE": "2021-01-08T14:35:55Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-pluging__menu--code-inject/master/README.md"
 }
 {
@@ -635,7 +635,7 @@
   "LANG": "php",
   "DESC": "Switch themes depending on website",
   "DATE": "2021-01-01T13:08:20Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__admin-themes/master/README.md"
 }
 {
@@ -645,7 +645,7 @@
   "LANG": "php",
   "DESC": "AndyP Plugin Manager",
   "DATE": "2020-12-26T10:39:18Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__andyp-plugins/master/README.md"
 }
 {
@@ -655,7 +655,7 @@
   "LANG": "php",
   "DESC": "A Github Action workflow to run WordPress, PHPUnit, MySQL and pull in a second private repo",
   "DATE": "2020-11-30T10:44:02Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/github__actions--WP-workflow-example/master/README.md"
 }
 {
@@ -665,7 +665,7 @@
   "LANG": "shell",
   "DESC": "Pipeline Project - Exporter",
   "DATE": "2020-10-06T08:14:38Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__pipeline--exporter/master/README.md"
 }
 {
@@ -675,7 +675,7 @@
   "LANG": "php",
   "DESC": "Google-My-Business Plugin implementation ",
   "DATE": "2020-10-04T14:05:52Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__oauth--GMB/master/README.md"
 }
 {
@@ -685,7 +685,7 @@
   "LANG": "php",
   "DESC": "oAuth implementation to separate away from Universal Exporter Plugin",
   "DATE": "2020-09-30T16:27:08Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__oauth--YouTube/master/README.md"
 }
 {
@@ -695,7 +695,7 @@
   "LANG": "php",
   "DESC": "Embed codemirror textarea fields for ACF",
   "DATE": "2020-09-29T16:19:31Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__acf--codemirror/master/README.md"
 }
 {
@@ -705,7 +705,7 @@
   "LANG": "php",
   "DESC": "Youtube downloader for WordPress.",
   "DATE": "2020-09-20T13:44:37Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__ytdl/master/README.md"
 }
 {
@@ -715,7 +715,7 @@
   "LANG": "php",
   "DESC": "Demo of how to get google OAUTH working in wordpress.",
   "DATE": "2020-09-15T06:45:25Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__oauth-demo/master/README.md"
 }
 {
@@ -725,7 +725,7 @@
   "LANG": "php",
   "DESC": "Renders the datetime picker inline rather than a popup.",
   "DATE": "2020-09-04T07:58:51Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__acf--inline-datetime-field/master/README.md"
 }
 {
@@ -735,7 +735,7 @@
   "LANG": "shell",
   "DESC": "Pipeline Processor to combine records. Part of the Pipeline Project",
   "DATE": "2020-08-16T15:09:13Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__pipeline--processor/master/README.md"
 }
 {
@@ -745,7 +745,7 @@
   "LANG": "php",
   "DESC": "Create admin widgets for the wordpress dashboard. Enables you to embed any code (including iframes) for Google Data studio embeds.",
   "DATE": "2020-08-16T13:22:27Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__admin-widgets/master/README.md"
 }
 {
@@ -755,7 +755,7 @@
   "LANG": "vim script",
   "DESC": "Library of BASH and CLI scripts",
   "DATE": "2020-08-12T08:58:28Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/scripts__tools/master/README.md"
 }
 {
@@ -765,7 +765,7 @@
   "LANG": "css",
   "DESC": "My customisations for Typora to look a little more like Notion.so ",
   "DATE": "2020-08-10T09:07:03Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/typora__notion-theme/master/README.md"
 }
 {
@@ -775,7 +775,7 @@
   "LANG": "scss",
   "DESC": "Create an animated Stack of posts for homepage. Uses anime.js",
   "DATE": "2020-07-25T12:36:58Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__pulse--stack/master/README.md"
 }
 {
@@ -785,7 +785,7 @@
   "LANG": "scss",
   "DESC": "Chips shortcode for the parkourpulse pages.",
   "DATE": "2020-07-18T11:34:54Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__pulse-chips/master/README.md"
 }
 {
@@ -795,7 +795,7 @@
   "LANG": "null",
   "DESC": "My Github profile with a github action that automatically creates a list of my repos.",
   "DATE": "2020-07-16T17:20:13Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/IORoot/master/README.md"
 }
 {
@@ -805,7 +805,7 @@
   "LANG": "typescript",
   "DESC": "Scrape Instagram's API with Puppeteer",
   "DATE": "2020-07-14T08:30:48Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/scraper__instamancer/master/README.md"
 }
 {
@@ -815,7 +815,7 @@
   "LANG": "php",
   "DESC": "Year-view wall planner for Google Calendar",
   "DATE": "2020-06-21T07:24:10Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/visual-planner/master/README.md"
 }
 {
@@ -825,7 +825,7 @@
   "LANG": "php",
   "DESC": "Allows you to import and export ACF options directly from the database. Caution, this is very dangerous!",
   "DATE": "2020-05-23T16:02:33Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__acf-options-import-export/master/README.md"
 }
 {
@@ -835,7 +835,7 @@
   "LANG": "scss",
   "DESC": "Creates simple CSS-Only modals",
   "DATE": "2020-05-18T13:56:40Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__shortcode--modals/master/README.md"
 }
 {
@@ -845,7 +845,7 @@
   "LANG": "shell",
   "DESC": "Generate SVG images based on featured images.",
   "DATE": "2020-03-29T07:03:50Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__generative-images/master/README.md"
 }
 {
@@ -855,7 +855,7 @@
   "LANG": "php",
   "DESC": "Apply a regex to any post type and field. Test, Single ID or Bulk all posts of type.",
   "DATE": "2020-02-07T19:18:32Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__regex-posts/master/README.md"
 }
 {
@@ -865,7 +865,7 @@
   "LANG": "php",
   "DESC": "Add a 'reply-to' header into the advanced-forms (hookturn.io) plugin.",
   "DATE": "2019-12-20T11:32:03Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__advanced-forms--replyto/master/README.md"
 }
 {
@@ -875,7 +875,7 @@
   "LANG": "javascript",
   "DESC": "Custom Lighthouse-viewer to read a Pagespeed Insights API JSON response file specified on URL path",
   "DATE": "2019-12-13T13:08:20Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/pagespeed__lighthouse-viewer/master/README.md"
 }
 {
@@ -885,7 +885,7 @@
   "LANG": "php",
   "DESC": "Changes a wordpress dynamic sidebar menu into a responsive dropdown select menu",
   "DATE": "2019-11-11T19:25:32Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__menus--responsive/master/README.md"
 }
 {
@@ -895,7 +895,7 @@
   "LANG": "shell",
   "DESC": "Grok_exporter yaml config files for Apache2 access and error logs. For use with Prometheus.",
   "DATE": "2019-10-29T18:44:09Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/prometheus__grok--apache2/master/README.md"
 }
 {
@@ -905,7 +905,7 @@
   "LANG": "php",
   "DESC": "Removes the Wordpress 'Comments' menu.",
   "DATE": "2019-10-28T16:45:37Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__admin--remove-comments/master/README.md"
 }
 {
@@ -915,7 +915,7 @@
   "LANG": "php",
   "DESC": "Adds posts of a selected category to a menu automatically.",
   "DATE": "2019-10-28T16:42:32Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__auto-menu/master/README.md"
 }
 {
@@ -925,7 +925,7 @@
   "LANG": "shell",
   "DESC": "API Scraper Wordpress plugin that will allow you to get data from YouTube and output the results as you like.",
   "DATE": "2019-10-28T16:39:44Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__api-scraper/master/README.md"
 }
 {
@@ -935,7 +935,7 @@
   "LANG": "php",
   "DESC": "ACF options panel to allow you to select a specific page for your footer.",
   "DATE": "2019-10-28T16:37:36Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__footer/master/README.md"
 }
 {
@@ -945,7 +945,7 @@
   "LANG": "scss",
   "DESC": "Wordpress theme for LondonParkour. Uses _underscores.",
   "DATE": "2019-10-28T15:24:23Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-theme__londonparkour--v4/master/README.md"
 }
 {
@@ -955,6 +955,6 @@
   "LANG": "javascript",
   "DESC": "Zurb Framework Newsletter creator.",
   "DATE": "2018-10-11T12:47:00Z",
-  "TAGS": "",
+  "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/zurb__newsletter--londonparkour/master/README.md"
 }
