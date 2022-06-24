@@ -2,6 +2,7 @@
 
 # Username
 GHUSER=IOROOT;
+PAT=$1;
 
 # Grab TWO PAGES of the Repo list from Github API
 /usr/bin/curl "https://api.github.com/users/$GHUSER/repos?per_page=100&sort=created&direction=desc" | /usr/bin/jq '.[] | {NAME: .name, REPO: .full_name, URL: .html_url, LANG: ( "https://api.github.com/repos/" + .full_name + "/languages"), DESC: .description, DATE: .created_at, READ: ("https://raw.githubusercontent.com/" + .full_name + "/master/README.md") }  ' > ./repos.json
@@ -18,7 +19,7 @@ echo "Token is: |${GITHUB_TOKEN}|"
 # capitalises the language also.
 jq -r '.LANG' ./repos.json | while read url; do
     # repo_language=$(/usr/bin/curl -s "${url}" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | jq -r 'keys | last(.[])')
-    /usr/bin/curl -s "${url}" --header 'authorization: Bearer $GITHUB_TOKEN' > languages.json
+    /usr/bin/curl -u ${GHUSER}:${PAT} -s "${url}" > languages.json
     sleep 1
     cat languages.json
     repo_language=$(cat languages.json | jq -r 'keys | last(.[])')
