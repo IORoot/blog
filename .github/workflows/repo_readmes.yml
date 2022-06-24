@@ -25,6 +25,8 @@ jobs:
       - name: Run JSON Collector & Parser
         run: |  
 
+            printenv
+            
             # Copy scripts here.
             cp .github/workflows/scripts/*.sh ./
 
@@ -39,10 +41,11 @@ jobs:
             rm -f ./download_readmes.sh
             rm -f ./list_all_repos.sh
             rm -f ./languages.json
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          
+
       # # DEBUG with NGROK.
       # - name: Start SSH session
       #   uses: luchihoratiu/debug-via-ssh@main
