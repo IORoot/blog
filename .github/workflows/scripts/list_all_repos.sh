@@ -18,7 +18,7 @@ jq -r '.LANG' ./repos.json | while read url; do
     /usr/bin/curl -u ${GHUSER}:${PAT} -s "${url}" > languages.json
 
     main_language=$(cat languages.json | jq -r 'keys | last(.[])')
-    tags="$(cat languages.json | jq -c -r 'keys | . | @tsv')"
+    tags=$(cat languages.json | jq -c 'keys | . | @csv')
 
     echo "lang: ${main_language}"
     echo "tags: ${tags}"
