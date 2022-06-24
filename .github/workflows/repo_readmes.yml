@@ -32,7 +32,7 @@ jobs:
             ./list_all_repos.sh ${{ secrets.PAT }}
       
             # Download Readmes and create folders.
-            ./download_readmes.sh
+            ./download_readmes.sh ${{ secrets.PAT }}
 
             # Cleanup
             # rm -f ./repos.json

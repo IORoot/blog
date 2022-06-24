@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Username:Password
+GHUSER=IOROOT;
+PAT=$1;
+
 # Loop JSON and get languages
 # -r for raw. (Removes quotes around strings)
 # capitalises the language also.
@@ -25,7 +29,7 @@ jq -c -r '( .NAME + "~" + .REPO + "~" + .URL + "~" + .DATE + "~" + .READ + "~" +
 
     # Download Readme
     
-    /usr/bin/curl -qs "${readme}" -O readme.md > /dev/null
+    /usr/bin/curl -u ${GHUSER}:${PAT} -qs "${readme}" -O readme.md > /dev/null
 
     # Cleanup IMG tags
     cat README.md | perl -pe 's|(<img.*?)>|$1/>|' | perl -pe 's|//>|/>|' > README_PERL.md && mv README_PERL.md README.md

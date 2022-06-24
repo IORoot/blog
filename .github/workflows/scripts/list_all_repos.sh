@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Username
+# Username:Password
 GHUSER=IOROOT;
 PAT=$1;
 
