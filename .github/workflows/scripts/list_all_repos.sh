@@ -22,7 +22,6 @@ jq -r '.LANG' ./repos.json | while read url; do
 
     echo "lang: ${main_language}"
     echo "tags: ${tags}"
-    echo "---"
 
     lowercased=${main_language,,}
 
@@ -30,4 +29,5 @@ jq -r '.LANG' ./repos.json | while read url; do
 
     sed -i "s|REPLACE|\"${tags}\"|g" ./repos.json
 
+    echo "---"
 done
