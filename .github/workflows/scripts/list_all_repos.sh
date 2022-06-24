@@ -16,7 +16,6 @@ jq -r '.LANG' ./repos.json | while read url; do
     echo "url: ${url}"
 
     /usr/bin/curl -u ${GHUSER}:${PAT} -s "${url}" > languages.json
-    cat languages.json
 
     main_language=$(cat languages.json | jq -r 'keys | last(.[])')
     tags="$(cat languages.json | jq -c -r 'keys | . | @tsv')"
@@ -28,8 +27,7 @@ jq -r '.LANG' ./repos.json | while read url; do
     lowercased=${main_language,,}
 
     sed -i "s|${url}|${lowercased}|g" ./repos.json
+
     sed -e "s|REPLACE|${tags}|g" ./repos.json
 
 done
-
-cat ./repos.json
