@@ -3,9 +3,17 @@
 # Loop JSON and get languages
 # -r for raw. (Removes quotes around strings)
 # capitalises the language also.
-jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .DATE + " " + .READ + " " + .LANG)' ./repos.json | while read name repo url date readme lang; do
+IFS="~"
 
-    echo "${name}"
+jq -c -r '( .NAME + "~" + .REPO + "~" + .URL + "~" + .DATE + "~" + .READ + "~" + .LANG + "~" + .DESC )' ./repos.json | while read name repo url date readme lang desc; do
+
+    # echo "${name}"
+    # echo "${repo}"
+    # echo "${url}"
+    # echo "${date}"
+    # echo "${readme}"
+    # echo "${lang}"
+    # echo "${desc}"
 
     # Skip if already exists
     if [[ ! -f "./${name}" ]]; then
@@ -17,7 +25,7 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .DATE + " " + .READ + " " +
 
     # Download Readme
     
-    /usr/bin/curl -qs "${readme}" -O readme.md
+    /usr/bin/curl -qs "${readme}" -O readme.md > /dev/null
 
     # Cleanup IMG tags
     cat README.md | perl -pe 's|(<img.*?)>|$1/>|' | perl -pe 's|//>|/>|' > README_PERL.md && mv README_PERL.md README.md
@@ -33,6 +41,11 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .DATE + " " + .READ + " " +
         slug="${name,,}"    # lowercase
         slug="${slug/./-}"  # dots for dash
 
+        ## If icon is null, default to github
+        if [ $lang == "null" ]; then
+                lang="github"
+        fi
+
         ## Prefix Frontmatter
         echo "---" > index.mdx
         echo "repo: \"${url}\"" >> index.mdx
@@ -40,6 +53,7 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .DATE + " " + .READ + " " +
         echo "date:  \"$yyyymmdd\"" >> index.mdx
         echo "title: \"${name}\"" >> index.mdx
         echo "icon:  \"$lang\"" >> index.mdx
+        echo "desc:  \"$desc\"" >> index.mdx
         echo "---" >> index.mdx
         printf "\n\n" >> index.mdx
         cat README.md >> index.mdx
@@ -47,17 +61,8 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .DATE + " " + .READ + " " +
     else
         # Keep Frontmatter already set. 
         # May have been manually changed, so don't alter it.
-        head -n 7 index.mdx > frontmatter.md && mv frontmatter.md index.mdx
+        head -n 8 index.mdx > frontmatter.md && mv frontmatter.md index.mdx
         cat README.md >> index.mdx
-    fi
-
-    ## Append the REPO if missing
-    REPO_FIELD=$(grep "^repo.*" index.mdx)
-    if [ -z "$REPO_FIELD" ]; then
-        echo "---"  > repo.mdx
-        echo "repo: \"${url}\"" >> repo.mdx
-        tail -n +2 index.mdx >> repo.mdx
-        mv -f repo.mdx index.mdx
     fi
 
     # Clean up Readme.
