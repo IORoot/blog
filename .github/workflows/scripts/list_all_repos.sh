@@ -20,7 +20,6 @@ echo "Token is: |${GITHUB_TOKEN}|"
 jq -r '.LANG' ./repos.json | while read url; do
     # repo_language=$(/usr/bin/curl -s "${url}" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | jq -r 'keys | last(.[])')
     /usr/bin/curl -u ${GHUSER}:${PAT} -s "${url}" > languages.json
-    sleep 1
     cat languages.json
     repo_language=$(cat languages.json | jq -r 'keys | last(.[])')
     lowercased=${repo_language,,}
