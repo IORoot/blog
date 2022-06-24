@@ -8,15 +8,6 @@
   "READ": "https://raw.githubusercontent.com/IORoot/neofetch/master/README.md"
 }
 {
-  "NAME": "poc",
-  "REPO": "IORoot/poc",
-  "URL": "https://github.com/IORoot/poc",
-  "LANG": "c",
-  "DESC": "POC CVE",
-  "DATE": "2022-06-14T19:53:35Z",
-  "READ": "https://raw.githubusercontent.com/IORoot/poc/master/README.md"
-}
-{
   "NAME": "obsidian-releases",
   "REPO": "IORoot/obsidian-releases",
   "URL": "https://github.com/IORoot/obsidian-releases",
@@ -35,13 +26,13 @@
   "READ": "https://raw.githubusercontent.com/IORoot/Obsidian-Monokai/master/README.md"
 }
 {
-  "NAME": "IORoot.com",
-  "REPO": "IORoot/IORoot.com",
-  "URL": "https://github.com/IORoot/IORoot.com",
+  "NAME": "IORoot-Website",
+  "REPO": "IORoot/IORoot-Website",
+  "URL": "https://github.com/IORoot/IORoot-Website",
   "LANG": "javascript",
   "DESC": "Gatsby Website for IORoot.com",
   "DATE": "2022-06-12T14:11:42Z",
-  "READ": "https://raw.githubusercontent.com/IORoot/IORoot.com/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/IORoot-Website/master/README.md"
 }
 {
   "NAME": "SVGencode",
@@ -141,15 +132,6 @@
   "DESC": "Example PHP scripts for Google My Business API v4.9",
   "DATE": "2021-09-28T16:00:34Z",
   "READ": "https://raw.githubusercontent.com/IORoot/examples__google-my-business/master/README.md"
-}
-{
-  "NAME": "n8n__social",
-  "REPO": "IORoot/n8n__social",
-  "URL": "https://github.com/IORoot/n8n__social",
-  "LANG": "null",
-  "DESC": null,
-  "DATE": "2021-09-22T09:08:42Z",
-  "READ": "https://raw.githubusercontent.com/IORoot/n8n__social/master/README.md"
 }
 {
   "NAME": "wp-theme__pulse",
@@ -524,7 +506,7 @@
   "NAME": "wp-plugin__page-builder--yt-lite",
   "REPO": "IORoot/wp-plugin__page-builder--yt-lite",
   "URL": "https://github.com/IORoot/wp-plugin__page-builder--yt-lite",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Adds YouTube Lite into the Page Builder",
   "DATE": "2021-01-20T07:53:40Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__page-builder--yt-lite/master/README.md"
@@ -533,7 +515,7 @@
   "NAME": "wp-plugin__taxonomy--extra",
   "REPO": "IORoot/wp-plugin__taxonomy--extra",
   "URL": "https://github.com/IORoot/wp-plugin__taxonomy--extra",
-  "LANG": "message",
+  "LANG": "php",
   "DESC": "Extra ACF fields for taxonomies",
   "DATE": "2021-01-20T07:50:05Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__taxonomy--extra/master/README.md"
