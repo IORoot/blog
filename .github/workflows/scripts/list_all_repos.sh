@@ -12,8 +12,9 @@ GHUSER=IOROOT;
 # -r for raw. (Removes quotes around strings)
 # capitalises the language also.
 jq -r '.LANG' ./repos.json | while read url; do
-    # repo_language=$(/usr/bin/curl -s "${url}" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | jq -r 'keys | last(.[])')
-    /usr/bin/curl -s "${url}" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' > languages.json
+    # repo_language=$(/usr/bin/curl -s "${url}" | jq -r 'keys | last(.[])')
+    /usr/bin/curl -s "${url}" > languages.json
+    sleep 1
     cat languages.json
     repo_language=$(cat languages.json | jq -r 'keys | last(.[])')
     lowercased=${repo_language,,}
