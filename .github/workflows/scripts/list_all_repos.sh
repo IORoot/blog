@@ -14,13 +14,15 @@ cat ./repos.json
 # -r for raw. (Removes quotes around strings)
 # capitalises the language also.
 jq -r '.LANG' ./repos.json | while read url; do
+
+    echo "url: ${url}"
+
     /usr/bin/curl -u ${GHUSER}:${PAT} -s "${url}" > languages.json
     cat languages.json
 
     main_language=$(cat languages.json | jq -r 'keys | last(.[])')
     tags=$(cat languages.json | jq -c -r 'keys | . | @tsv')
 
-    echo "url: ${url}"
     echo "lang: ${main_language}"
     echo "tags: ${tags}"
     echo "---"
