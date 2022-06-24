@@ -40,6 +40,9 @@ jobs:
             rm -f ./list_all_repos.sh
             rm -f ./languages.json
 
+            export GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+            echo $GITHUB_TOKEN
+
       # DEBUG with NGROK.
       - name: Start SSH session
         uses: luchihoratiu/debug-via-ssh@main
