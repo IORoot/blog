@@ -1,4 +1,13 @@
 {
+  "NAME": "githubaction__scrapesite--netlify",
+  "REPO": "IORoot/githubaction__scrapesite--netlify",
+  "URL": "https://github.com/IORoot/githubaction__scrapesite--netlify",
+  "LANG": "null",
+  "DESC": "Github Action to scrape a website, make a static version and push to netlify.",
+  "DATE": "2022-06-24T15:00:00Z",
+  "READ": "https://raw.githubusercontent.com/IORoot/githubaction__scrapesite--netlify/master/README.md"
+}
+{
   "NAME": "neofetch",
   "REPO": "IORoot/neofetch",
   "URL": "https://github.com/IORoot/neofetch",
@@ -53,13 +62,13 @@
   "READ": "https://raw.githubusercontent.com/IORoot/blog/master/README.md"
 }
 {
-  "NAME": "gatsby-latest-versions",
-  "REPO": "IORoot/gatsby-latest-versions",
-  "URL": "https://github.com/IORoot/gatsby-latest-versions",
+  "NAME": "latestversions-website",
+  "REPO": "IORoot/latestversions-website",
+  "URL": "https://github.com/IORoot/latestversions-website",
   "LANG": "javascript",
   "DESC": null,
   "DATE": "2022-05-18T07:36:13Z",
-  "READ": "https://raw.githubusercontent.com/IORoot/gatsby-latest-versions/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/latestversions-website/master/README.md"
 }
 {
   "NAME": "wp-plugin__memberpress--login-logout",
@@ -98,13 +107,13 @@
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__cpt--syllabus/master/README.md"
 }
 {
-  "NAME": "latestversions",
-  "REPO": "IORoot/latestversions",
-  "URL": "https://github.com/IORoot/latestversions",
+  "NAME": "latestversions-scraper",
+  "REPO": "IORoot/latestversions-scraper",
+  "URL": "https://github.com/IORoot/latestversions-scraper",
   "LANG": "javascript",
   "DESC": null,
   "DATE": "2021-10-28T17:39:11Z",
-  "READ": "https://raw.githubusercontent.com/IORoot/latestversions/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/latestversions-scraper/master/README.md"
 }
 {
   "NAME": "wp-plugin__rest--isometric",
@@ -515,7 +524,7 @@
   "NAME": "wp-plugin__taxonomy--extra",
   "REPO": "IORoot/wp-plugin__taxonomy--extra",
   "URL": "https://github.com/IORoot/wp-plugin__taxonomy--extra",
-  "LANG": "php",
+  "LANG": "message",
   "DESC": "Extra ACF fields for taxonomies",
   "DATE": "2021-01-20T07:50:05Z",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__taxonomy--extra/master/README.md"
