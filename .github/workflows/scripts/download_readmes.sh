@@ -29,10 +29,14 @@ jq -c -r '( .NAME + " " + .REPO + " " + .URL + " " + .DATE + " " + .READ + " " +
         ## convert date "2022-06-13T17:04:18Z" to "2022-06-13"
         yyyymmdd=$(echo $date | cut -d 'T' -f 1)
 
+        ## Cleanup slug.
+        slug="${name,,}"    # lowercase
+        slug="${slug/./-}"  # dots for dash
+
         ## Prefix Frontmatter
         echo "---" > index.mdx
         echo "repo: \"${url}\"" >> index.mdx
-        echo "slug:  \"/projects/${name}\"" >> index.mdx
+        echo "slug:  \"/projects/${slug}\"" >> index.mdx
         echo "date:  \"$yyyymmdd\"" >> index.mdx
         echo "title: \"${name}\"" >> index.mdx
         echo "icon:  \"$lang\"" >> index.mdx
