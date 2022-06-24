@@ -25,8 +25,7 @@ jobs:
       - name: Run JSON Collector & Parser
         run: |  
 
-            printenv
-            
+ 
             # Copy scripts here.
             cp .github/workflows/scripts/*.sh ./
 
@@ -34,25 +33,16 @@ jobs:
             ./list_all_repos.sh ${{ secrets.PAT }}
       
             # Download Readmes and create folders.
-            # ./download_readmes.sh
+            ./download_readmes.sh
 
             # Cleanup
             # rm -f ./repos.json
-            # rm -f ./download_readmes.sh
-            # rm -f ./list_all_repos.sh
-            # rm -f ./languages.json
+            rm -f ./download_readmes.sh
+            rm -f ./list_all_repos.sh
+            rm -f ./languages.json
 
         env:
           PAT: ${{ secrets.PAT }}
-
-
-      # # DEBUG with NGROK.
-      # - name: Start SSH session
-      #   uses: luchihoratiu/debug-via-ssh@main
-      #   with:
-      #     NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
-      #     SSH_PASS: ${{ secrets.NGROK_SSH_PASS }}
-      #     NGROK_REGION: eu
 
 
       - name: Recommit all new Readmes
