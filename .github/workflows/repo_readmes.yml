@@ -34,13 +34,13 @@ jobs:
             ./list_all_repos.sh ${{ secrets.GITHUB_TOKEN }}
       
             # Download Readmes and create folders.
-            ./download_readmes.sh
+            # ./download_readmes.sh
 
             # Cleanup
             # rm -f ./repos.json
-            rm -f ./download_readmes.sh
-            rm -f ./list_all_repos.sh
-            rm -f ./languages.json
+            # rm -f ./download_readmes.sh
+            # rm -f ./list_all_repos.sh
+            # rm -f ./languages.json
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
