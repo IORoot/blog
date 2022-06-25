@@ -9,7 +9,7 @@ PAT=$1;
 # capitalises the language also.
 IFS="~"
 
-jq -c -r '( .NAME + "~" + .REPO + "~" + .URL + "~" + .DATE + "~" + .READ + "~" + .LANG + "~" + .TAGS + "~" + .DESC )' ./repos.json | while read name repo url date readme lang tags desc; do
+jq -c -r '( .NAME + "~" + .REPO + "~" + .URL + "~" + .DATE + "~" + .READ + "~" + .LANG + "~" + .DESC )' ./repos.json | while read name repo url date readme lang desc; do
 
     # echo "${name}"
     # echo "${repo}"
@@ -18,7 +18,6 @@ jq -c -r '( .NAME + "~" + .REPO + "~" + .URL + "~" + .DATE + "~" + .READ + "~" +
     # echo "${readme}"
     # echo "${lang}"
     # echo "${desc}"
-    # echo "${tags}"
 
     # Skip if already exists
     if [[ ! -f "./${name}" ]]; then
@@ -59,7 +58,6 @@ jq -c -r '( .NAME + "~" + .REPO + "~" + .URL + "~" + .DATE + "~" + .READ + "~" +
         echo "title: \"${name}\"" >> index.mdx
         echo "icon:  \"$lang\"" >> index.mdx
         echo "desc:  \"$desc\"" >> index.mdx
-        echo "tags:  \"$tags\"" >> index.mdx
         echo "---" >> index.mdx
         printf "\n\n" >> index.mdx
         cat README.md >> index.mdx
@@ -67,7 +65,7 @@ jq -c -r '( .NAME + "~" + .REPO + "~" + .URL + "~" + .DATE + "~" + .READ + "~" +
     else
         # Keep Frontmatter already set. 
         # May have been manually changed, so don't alter it.
-        head -n 9 index.mdx > frontmatter.md && mv frontmatter.md index.mdx
+        head -n 8 index.mdx > frontmatter.md && mv frontmatter.md index.mdx
         cat README.md >> index.mdx
     fi
 
