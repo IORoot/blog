@@ -219,16 +219,6 @@
   "READ": "https://raw.githubusercontent.com/IORoot/workflow__puppeteer--demo/master/README.md"
 }
 {
-  "NAME": "deploy__EXPORTER",
-  "REPO": "IORoot/deploy__EXPORTER",
-  "URL": "https://github.com/IORoot/deploy__EXPORTER",
-  "LANG": "null",
-  "DESC": "Exporter Project for LondonParkour",
-  "DATE": "2021-08-10T09:50:07Z",
-  "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/deploy__EXPORTER/master/README.md"
-}
-{
   "NAME": "macos__json2clr--convert",
   "REPO": "IORoot/macos__json2clr--convert",
   "URL": "https://github.com/IORoot/macos__json2clr--convert",
@@ -357,16 +347,6 @@
   "DATE": "2021-05-29T11:44:48Z",
   "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__shortcode--breadcrumbs/master/README.md"
-}
-{
-  "NAME": "github__pages--Lighthouse-Results",
-  "REPO": "IORoot/github__pages--Lighthouse-Results",
-  "URL": "https://github.com/IORoot/github__pages--Lighthouse-Results",
-  "LANG": "html",
-  "DESC": "Send to Netlify, from the testing github-action on STAGING.",
-  "DATE": "2021-04-26T10:54:42Z",
-  "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/github__pages--Lighthouse-Results/master/README.md"
 }
 {
   "NAME": "wp-plugin__cpt--support",
@@ -947,14 +927,4 @@
   "DATE": "2019-10-28T15:24:23Z",
   "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-theme__londonparkour--v4/master/README.md"
-}
-{
-  "NAME": "zurb__newsletter--londonparkour",
-  "REPO": "IORoot/zurb__newsletter--londonparkour",
-  "URL": "https://github.com/IORoot/zurb__newsletter--londonparkour",
-  "LANG": "javascript",
-  "DESC": "Zurb Framework Newsletter creator.",
-  "DATE": "2018-10-11T12:47:00Z",
-  "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/zurb__newsletter--londonparkour/master/README.md"
 }
