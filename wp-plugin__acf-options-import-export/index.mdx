@@ -29,16 +29,20 @@ desc:  "Allows you to import and export ACF options directly from the database. 
 
 * 1. [Table of Contents](#TableofContents)
 * 2. [About The Project](#AboutTheProject)
-	* 2.1. [Built With](#BuiltWith)
-	* 2.2. [Installation](#Installation)
+	* 2.1. [Why?](#Why)
+	* 2.2. [Built With](#BuiltWith)
+	* 2.3. [Installation](#Installation)
 * 3. [Usage](#Usage)
-	* 3.1. [`[andyp_labs_stack]`](#andyp_labs_stack)
-	* 3.2. [`[andyp_labs_rest]`](#andyp_labs_rest)
-* 4. [Customising](#Customising)
+	* 3.1. [Exporting](#Exporting)
+	* 3.2. [Importing](#Importing)
+	* 3.3. [Repeaters](#Repeaters)
+	* 3.4. [Warnings](#Warnings)
+* 4. [ Customising](#Customising)
 * 5. [Troubleshooting](#Troubleshooting)
 * 6. [Contributing](#Contributing)
 * 7. [License](#License)
 * 8. [Contact](#Contact)
+
 
 
 
@@ -50,7 +54,7 @@ You can then import that json file back into the database.
 
 This is a super-dumb sql dump of all fields from the database with the name of your fields.
 
-### Why?
+###  2.1. <a name='Why'></a>Why?
 
 I have a load of data filled in on my development installation and want to port over all of the
 records to my staging and live servers without having to re-create all records by hand. This
@@ -61,7 +65,7 @@ them into another installation quite quickly.
 
 
 
-###  2.1. <a name='BuiltWith'></a>Built With
+###  2.2. <a name='BuiltWith'></a>Built With
 
 This project was built with the following frameworks, technologies and software.
 
@@ -74,7 +78,7 @@ This project was built with the following frameworks, technologies and software.
 
 
 
-###  2.2. <a name='Installation'></a>Installation
+###  2.3. <a name='Installation'></a>Installation
 
 These are the steps to get up and running with this plugin.
 
@@ -93,7 +97,7 @@ These are the steps to get up and running with this plugin.
 
 A new menu item will appear under the ACF 'custom fields' menu call 'ACF import/export'.
 
-### Exporting
+###  3.1. <a name='Exporting'></a>Exporting
 
 Supply a comma separated list of field names to export.
 
@@ -103,7 +107,7 @@ my_field1, myrepeater, my_text_area1
 
 Click export, and save the `options.json` file.
 
-### Importing
+###  3.2. <a name='Importing'></a>Importing
 
 Click on the button to upload your `options.json` file. Note it **MUST** be called `options.json` to work.
 
@@ -111,13 +115,13 @@ Click import.
 
     WARNING - ALL  EXISTING FIELDS OF THE SAME NAME WILL BE OVERWRITTEN.
 
-### Repeaters
+###  3.3. <a name='Repeaters'></a>Repeaters
 
 This is very handy for repeater fields. I usually place most things into top-level repeater fields. 
 I can just specify the name of the top-level repeater field and it will automatically grab all
 sub fields as well.
 
-### Warnings
+###  3.4. <a name='Warnings'></a>Warnings
 
 1. The import function runs a `insert_option` function on every record it finds in the json file.
 2. The file to import MUST be called `options.json`. I know, thats lame, but it'll have to do for now.
