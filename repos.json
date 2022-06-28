@@ -673,7 +673,7 @@
   "REPO": "IORoot/wp-plugin__acf--codemirror",
   "URL": "https://github.com/IORoot/wp-plugin__acf--codemirror",
   "LANG": "php",
-  "DESC": "Embed codemirror textarea fields for ACF",
+  "DESC": "Add CodeMirror textarea fields for Wordpress ACF",
   "DATE": "2020-09-29T16:19:31Z",
   "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__acf--codemirror/master/README.md"
@@ -723,7 +723,7 @@
   "REPO": "IORoot/wp-plugin__admin-widgets",
   "URL": "https://github.com/IORoot/wp-plugin__admin-widgets",
   "LANG": "php",
-  "DESC": "Create admin widgets for the wordpress dashboard. Enables you to embed any code (including iframes) for Google Data studio embeds.",
+  "DESC": "Create admin widgets for the wordpress dashboard. Enables you to embed any code including iframes.",
   "DATE": "2020-08-16T13:22:27Z",
   "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__admin-widgets/master/README.md"
