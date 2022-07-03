@@ -76,18 +76,20 @@ This project was built with the following frameworks, technologies and software.
 These are the steps to get up and running with this plugin.
 
 1. Clone the repo into your wordpress plugin folder
-    ```bash
-    git clone https://github.com/IORoot/wp-plugin__gcal-sync ./wp-content/plugins/gcal-sync
-    ```
+```bash
+git clone https://github.com/IORoot/wp-plugin__gcal-sync ./wp-content/plugins/gcal-sync
+```
 1. Clone the oauth repo into your wordpress plugin folder
-    ```bash
-    git clone https://github.com/IORoot/wp-plugin__oauth--gCAL ./wp-content/plugins/gcal-oauth
-    ```
+```bash
+git clone https://github.com/IORoot/wp-plugin__oauth--gCAL ./wp-content/plugins/gcal-oauth
+```
 1. Use Google API Console and create a new project. The project must include the "Google Calendar API".
 
 1. Generate an "OAuth 2.0 Client ID".
     1. Authorised JavaScript origins = https://londonparkour.com
     1. Authorised redirect URIs = https://londonparkour.com/wp-admin/admin-ajax.php
+
+    (replace for you own domains)
 
 1. Download a credentials JSON file for the generated project.
 
@@ -146,14 +148,14 @@ You can also run the PHP `preg_replace()` function on the description field of t
 
 1. Regex Pattern. What to match.
 e.g.
-    ```php
-    /<h1>/
-    ```
+```php
+/<h1>/
+```
 1. Replacement
 e.g.
-    ```php
-    <p class="text-xl md:text-3xl mb-10">
-    ```
+```php
+<p class="text-xl md:text-3xl mb-10">
+```
 This would replace all `<h1>` tags with the `<p class="text-xl md:text-3xl mb-10">` tag.
 
 ###  3.6. <a name='Scheduler'></a>Scheduler
