@@ -1,12 +1,12 @@
 {
-  "NAME": "github__action--scrapesite-netlify",
-  "REPO": "IORoot/github__action--scrapesite-netlify",
-  "URL": "https://github.com/IORoot/github__action--scrapesite-netlify",
+  "NAME": "github-action__scraper--to-netlify",
+  "REPO": "IORoot/github-action__scraper--to-netlify",
+  "URL": "https://github.com/IORoot/github-action__scraper--to-netlify",
   "LANG": "null",
   "DESC": "Github Action to scrape a website, make a static version and push to netlify.",
   "DATE": "2022-06-24T15:00:00Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/github__action--scrapesite-netlify/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/github-action__scraper--to-netlify/master/README.md"
 }
 {
   "NAME": "neofetch",
@@ -629,14 +629,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__andyp-plugins/master/README.md"
 }
 {
-  "NAME": "github__actions--WP-workflow-example",
-  "REPO": "IORoot/github__actions--WP-workflow-example",
-  "URL": "https://github.com/IORoot/github__actions--WP-workflow-example",
+  "NAME": "github-action__wordpress--phpunit",
+  "REPO": "IORoot/github-action__wordpress--phpunit",
+  "URL": "https://github.com/IORoot/github-action__wordpress--phpunit",
   "LANG": "php",
   "DESC": "A Github Action workflow to run WordPress, PHPUnit, MySQL and pull in a second private repo",
   "DATE": "2020-11-30T10:44:02Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/github__actions--WP-workflow-example/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/github-action__wordpress--phpunit/master/README.md"
 }
 {
   "NAME": "wp-plugin__pipeline--exporter",
