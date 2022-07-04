@@ -889,16 +889,6 @@
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__admin--remove-comments/master/README.md"
 }
 {
-  "NAME": "wp-plugin__auto-menu",
-  "REPO": "IORoot/wp-plugin__auto-menu",
-  "URL": "https://github.com/IORoot/wp-plugin__auto-menu",
-  "LANG": "php",
-  "DESC": "Adds posts of a selected category to a menu automatically.",
-  "DATE": "2019-10-28T16:42:32Z",
-  "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__auto-menu/master/README.md"
-}
-{
   "NAME": "wp-plugin__api-scraper",
   "REPO": "IORoot/wp-plugin__api-scraper",
   "URL": "https://github.com/IORoot/wp-plugin__api-scraper",
