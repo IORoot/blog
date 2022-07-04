@@ -199,14 +199,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/workflow__puppeteer--later.com/master/README.md"
 }
 {
-  "NAME": "action__puppeteer--media",
-  "REPO": "IORoot/action__puppeteer--media",
-  "URL": "https://github.com/IORoot/action__puppeteer--media",
+  "NAME": "github-action__puppeteer--video",
+  "REPO": "IORoot/github-action__puppeteer--video",
+  "URL": "https://github.com/IORoot/github-action__puppeteer--video",
   "LANG": "shell",
   "DESC": "Github Action to run puppeteer with media/video capabilities. (Default downloaded chrome cannot use video files)",
   "DATE": "2021-08-17T09:48:41Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/action__puppeteer--media/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/github-action__puppeteer--video/master/README.md"
 }
 {
   "NAME": "workflow__puppeteer--demo",
