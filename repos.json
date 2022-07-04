@@ -179,14 +179,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/github-action__cron-lighthouse/master/README.md"
 }
 {
-  "NAME": "deploy__PULSE",
-  "REPO": "IORoot/deploy__PULSE",
-  "URL": "https://github.com/IORoot/deploy__PULSE",
+  "NAME": "github-action__deploy--parkourpulse",
+  "REPO": "IORoot/github-action__deploy--parkourpulse",
+  "URL": "https://github.com/IORoot/github-action__deploy--parkourpulse",
   "LANG": "shell",
   "DESC": "PULSE website deploy through CI",
   "DATE": "2021-08-23T11:54:43Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/deploy__PULSE/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/github-action__deploy--parkourpulse/master/README.md"
 }
 {
   "NAME": "workflow__puppeteer--later.com",
@@ -279,14 +279,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/wp-theme__labs-londonparkour/master/README.md"
 }
 {
-  "NAME": "deploy__LABS",
-  "REPO": "IORoot/deploy__LABS",
-  "URL": "https://github.com/IORoot/deploy__LABS",
+  "NAME": "github-action__deploy--parkourlabs",
+  "REPO": "IORoot/github-action__deploy--parkourlabs",
+  "URL": "https://github.com/IORoot/github-action__deploy--parkourlabs",
   "LANG": "shell",
   "DESC": "labs.londonparkour.com deployment",
   "DATE": "2021-06-16T07:02:46Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/deploy__LABS/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/github-action__deploy--parkourlabs/master/README.md"
 }
 {
   "NAME": "wp-plugin__shortcode--tree",
@@ -419,14 +419,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__shortcode--picture/master/README.md"
 }
 {
-  "NAME": "deploy__STAGING",
-  "REPO": "IORoot/deploy__STAGING",
-  "URL": "https://github.com/IORoot/deploy__STAGING",
+  "NAME": "github-action__deploy--londonparkour",
+  "REPO": "IORoot/github-action__deploy--londonparkour",
+  "URL": "https://github.com/IORoot/github-action__deploy--londonparkour",
   "LANG": "shell",
   "DESC": "LondonParkour Staging wp-content, theme, plugins.",
   "DATE": "2021-04-07T15:04:57Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/deploy__STAGING/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/github-action__deploy--londonparkour/master/README.md"
 }
 {
   "NAME": "wp-plugin__page-builder--video-rotator",
