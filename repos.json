@@ -169,14 +169,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/wp-theme__pulse/master/README.md"
 }
 {
-  "NAME": "run__lighthouse",
-  "REPO": "IORoot/run__lighthouse",
-  "URL": "https://github.com/IORoot/run__lighthouse",
-  "LANG": "html",
+  "NAME": "github-action__cron-lighthouse",
+  "REPO": "IORoot/github-action__cron-lighthouse",
+  "URL": "https://github.com/IORoot/github-action__cron-lighthouse",
+  "LANG": "null",
   "DESC": "Runs Lighthouse against URLs - Saves to server.",
   "DATE": "2021-09-03T10:04:46Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/run__lighthouse/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/github-action__cron-lighthouse/master/README.md"
 }
 {
   "NAME": "deploy__PULSE",
