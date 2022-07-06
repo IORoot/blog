@@ -19,16 +19,6 @@
   "READ": "https://raw.githubusercontent.com/IORoot/github-action__scraper--to-netlify/master/README.md"
 }
 {
-  "NAME": "obsidian-releases",
-  "REPO": "IORoot/obsidian-releases",
-  "URL": "https://github.com/IORoot/obsidian-releases",
-  "LANG": "javascript",
-  "DESC": "Community plugins list, theme list, and releases of Obsidian.",
-  "DATE": "2022-06-13T17:04:18Z",
-  "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/obsidian-releases/master/README.md"
-}
-{
   "NAME": "Obsidian-Monokai",
   "REPO": "IORoot/Obsidian-Monokai",
   "URL": "https://github.com/IORoot/Obsidian-Monokai",
@@ -189,14 +179,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/github-action__deploy--parkourpulse/master/README.md"
 }
 {
-  "NAME": "workflow__puppeteer--later.com",
-  "REPO": "IORoot/workflow__puppeteer--later.com",
-  "URL": "https://github.com/IORoot/workflow__puppeteer--later.com",
+  "NAME": "github-action__puppeteer--later.com",
+  "REPO": "IORoot/github-action__puppeteer--later.com",
+  "URL": "https://github.com/IORoot/github-action__puppeteer--later.com",
   "LANG": "javascript",
   "DESC": "Run a puppeteer script to schedule a video on later.com",
   "DATE": "2021-08-17T16:25:37Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/workflow__puppeteer--later.com/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/github-action__puppeteer--later.com/master/README.md"
 }
 {
   "NAME": "github-action__puppeteer--video",
@@ -209,14 +199,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/github-action__puppeteer--video/master/README.md"
 }
 {
-  "NAME": "workflow__puppeteer--demo",
-  "REPO": "IORoot/workflow__puppeteer--demo",
-  "URL": "https://github.com/IORoot/workflow__puppeteer--demo",
+  "NAME": "github-action__puppeteer--demo",
+  "REPO": "IORoot/github-action__puppeteer--demo",
+  "URL": "https://github.com/IORoot/github-action__puppeteer--demo",
   "LANG": "javascript",
   "DESC": "Run Puppeteer scripts through github actions",
   "DATE": "2021-08-15T11:19:00Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/workflow__puppeteer--demo/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/github-action__puppeteer--demo/master/README.md"
 }
 {
   "NAME": "macos__json2clr--convert",
