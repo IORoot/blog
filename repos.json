@@ -1,4 +1,14 @@
 {
+  "NAME": "motd",
+  "REPO": "IORoot/motd",
+  "URL": "https://github.com/IORoot/motd",
+  "LANG": "shell",
+  "DESC": "Message of the Day",
+  "DATE": "2022-07-06T07:39:27Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/motd/master/README.md"
+}
+{
   "NAME": "github-action__scraper--to-netlify",
   "REPO": "IORoot/github-action__scraper--to-netlify",
   "URL": "https://github.com/IORoot/github-action__scraper--to-netlify",
@@ -7,16 +17,6 @@
   "DATE": "2022-06-24T15:00:00Z",
   "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/github-action__scraper--to-netlify/master/README.md"
-}
-{
-  "NAME": "neofetch",
-  "REPO": "IORoot/neofetch",
-  "URL": "https://github.com/IORoot/neofetch",
-  "LANG": "shell",
-  "DESC": "🖼️  A command-line system information tool written in bash 3.2+",
-  "DATE": "2022-06-20T17:10:22Z",
-  "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/neofetch/master/README.md"
 }
 {
   "NAME": "obsidian-releases",
@@ -787,16 +787,6 @@
   "DATE": "2020-07-14T08:30:48Z",
   "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/scraper__instamancer/master/README.md"
-}
-{
-  "NAME": "visual-planner",
-  "REPO": "IORoot/visual-planner",
-  "URL": "https://github.com/IORoot/visual-planner",
-  "LANG": "php",
-  "DESC": "Year-view wall planner for Google Calendar",
-  "DATE": "2020-06-21T07:24:10Z",
-  "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/visual-planner/master/README.md"
 }
 {
   "NAME": "wp-plugin__acf-options-import-export",
