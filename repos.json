@@ -799,14 +799,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__shortcode--modals/master/README.md"
 }
 {
-  "NAME": "wp-plugin__generative-images",
-  "REPO": "IORoot/wp-plugin__generative-images",
-  "URL": "https://github.com/IORoot/wp-plugin__generative-images",
+  "NAME": "wp-plugin__pipeline--generative-images",
+  "REPO": "IORoot/wp-plugin__pipeline--generative-images",
+  "URL": "https://github.com/IORoot/wp-plugin__pipeline--generative-images",
   "LANG": "shell",
   "DESC": "Generate SVG images based on featured images.",
   "DATE": "2020-03-29T07:03:50Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__generative-images/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__pipeline--generative-images/master/README.md"
 }
 {
   "NAME": "wp-plugin__regex-posts",
@@ -869,14 +869,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__admin--remove-comments/master/README.md"
 }
 {
-  "NAME": "wp-plugin__api-scraper",
-  "REPO": "IORoot/wp-plugin__api-scraper",
-  "URL": "https://github.com/IORoot/wp-plugin__api-scraper",
+  "NAME": "wp-plugin__pipeline--api-scraper",
+  "REPO": "IORoot/wp-plugin__pipeline--api-scraper",
+  "URL": "https://github.com/IORoot/wp-plugin__pipeline--api-scraper",
   "LANG": "shell",
   "DESC": "API Scraper Wordpress plugin that will allow you to get data from YouTube and output the results as you like.",
   "DATE": "2019-10-28T16:39:44Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__api-scraper/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__pipeline--api-scraper/master/README.md"
 }
 {
   "NAME": "wp-plugin__footer",
