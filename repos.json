@@ -1,4 +1,14 @@
 {
+  "NAME": "docker__puppeteer--facebook",
+  "REPO": "IORoot/docker__puppeteer--facebook",
+  "URL": "https://github.com/IORoot/docker__puppeteer--facebook",
+  "LANG": "javascript",
+  "DESC": "A container that runs puppeteer to login into facebook creator studio and schedule a video post to Instagram and Facebook.",
+  "DATE": "2022-07-10T10:04:50Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/docker__puppeteer--facebook/master/README.md"
+}
+{
   "NAME": "motd",
   "REPO": "IORoot/motd",
   "URL": "https://github.com/IORoot/motd",
