@@ -749,14 +749,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/typora__notion-theme/master/README.md"
 }
 {
-  "NAME": "wp-plugin__pulse--stack",
-  "REPO": "IORoot/wp-plugin__pulse--stack",
-  "URL": "https://github.com/IORoot/wp-plugin__pulse--stack",
+  "NAME": "wp-plugin__REST--pulse",
+  "REPO": "IORoot/wp-plugin__REST--pulse",
+  "URL": "https://github.com/IORoot/wp-plugin__REST--pulse",
   "LANG": "scss",
   "DESC": "Create an animated Stack of posts for homepage. Uses anime.js",
   "DATE": "2020-07-25T12:36:58Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__pulse--stack/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__REST--pulse/master/README.md"
 }
 {
   "NAME": "wp-plugin__pulse-chips",
