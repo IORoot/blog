@@ -89,14 +89,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__memberpress--login-logout/master/README.md"
 }
 {
-  "NAME": "wp-plugin__shortcode--sidebar-menu",
-  "REPO": "IORoot/wp-plugin__shortcode--sidebar-menu",
-  "URL": "https://github.com/IORoot/wp-plugin__shortcode--sidebar-menu",
+  "NAME": "wp-plugin__sidebar-creator",
+  "REPO": "IORoot/wp-plugin__sidebar-creator",
+  "URL": "https://github.com/IORoot/wp-plugin__sidebar-creator",
   "LANG": "php",
   "DESC": "Wordpress sidebar menu from taxonomy",
   "DATE": "2022-01-20T09:07:49Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__shortcode--sidebar-menu/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__sidebar-creator/master/README.md"
 }
 {
   "NAME": "wp-theme__syllabus-v1",
