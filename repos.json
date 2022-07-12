@@ -129,14 +129,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/latestversions-scraper/master/README.md"
 }
 {
-  "NAME": "wp-plugin__rest--isometric",
-  "REPO": "IORoot/wp-plugin__rest--isometric",
-  "URL": "https://github.com/IORoot/wp-plugin__rest--isometric",
+  "NAME": "wp-plugin__REST--isometric",
+  "REPO": "IORoot/wp-plugin__REST--isometric",
+  "URL": "https://github.com/IORoot/wp-plugin__REST--isometric",
   "LANG": "scss",
   "DESC": "Generic REST request with a view output of images in an isometic format.",
   "DATE": "2021-10-26T10:17:35Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__rest--isometric/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__REST--isometric/master/README.md"
 }
 {
   "NAME": "wp-plugin__page-builder--epic-slider",
@@ -759,14 +759,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__REST--pulse/master/README.md"
 }
 {
-  "NAME": "wp-plugin__pulse-chips",
-  "REPO": "IORoot/wp-plugin__pulse-chips",
-  "URL": "https://github.com/IORoot/wp-plugin__pulse-chips",
+  "NAME": "wp-plugin__menu-chips",
+  "REPO": "IORoot/wp-plugin__menu-chips",
+  "URL": "https://github.com/IORoot/wp-plugin__menu-chips",
   "LANG": "scss",
   "DESC": "Chips shortcode for the parkourpulse pages.",
   "DATE": "2020-07-18T11:34:54Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__pulse-chips/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__menu-chips/master/README.md"
 }
 {
   "NAME": "IORoot",
@@ -819,14 +819,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__pipeline--generative-images/master/README.md"
 }
 {
-  "NAME": "wp-plugin__regex-posts",
-  "REPO": "IORoot/wp-plugin__regex-posts",
-  "URL": "https://github.com/IORoot/wp-plugin__regex-posts",
+  "NAME": "wp-plugin__regexer",
+  "REPO": "IORoot/wp-plugin__regexer",
+  "URL": "https://github.com/IORoot/wp-plugin__regexer",
   "LANG": "php",
   "DESC": "Apply a regex to any post type and field. Test, Single ID or Bulk all posts of type.",
   "DATE": "2020-02-07T19:18:32Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__regex-posts/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__regexer/master/README.md"
 }
 {
   "NAME": "wp-plugin__advanced-forms--replyto",
