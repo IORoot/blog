@@ -34,7 +34,7 @@ desc:  "Allows you to obtain posts from wordpress and supply a template to apply
 	* 3.4. [Moustache Functions](#MoustacheFunctions)
 	* 3.5. [Add attributes to fetch shortcode](#Addattributestofetchshortcode)
 	* 3.6. [Different content fields](#Differentcontentfields)
-	* 3.7. [Add taxonomy / tag filters](#Addtaxonomytagfilters)
+	* 3.7. [Add taxonomy and tag filters](#Addtaxonomyandtagfilters)
 	* 3.8. [Content Note](#ContentNote)
 	* 3.9. [Help Example](#HelpExample)
 * 4. [Troubleshooting](#Troubleshooting)
@@ -42,6 +42,7 @@ desc:  "Allows you to obtain posts from wordpress and supply a template to apply
 * 6. [License](#License)
 * 7. [Contact](#Contact)
 * 8. [Changelog](#Changelog)
+
 
 
 
@@ -94,18 +95,20 @@ Use `{{help}}` to see ALL fields.
 ###  3.1. <a name='SimpleExample'></a>Simple Example
 
 ```html
-[fetch] Show the {{post::post_title}} [/fetch]
+    [fetch] Show the {{post::post_title}} [/fetch]
 ```
 
 
 ###  3.2. <a name='TemplateMoustacheFormat'></a>Template Moustache Format
 
 ```php
-{{type::field::level1::level2::level3--function}}
+    {{type::field::level1::level2::level3--function}}
 ```
 
 
 ###  3.3. <a name='MoustacheDataTypes'></a>Moustache Data Types
+
+Data Types
 
 - post
 - meta
@@ -117,17 +120,18 @@ Use `{{help}}` to see ALL fields.
 
 ###  3.4. <a name='MoustacheFunctions'></a>Moustache Functions
 
-```html
---sanitize
+```php
+    --sanitize
 ```
 
 
 ###  3.5. <a name='Addattributestofetchshortcode'></a>Add attributes to fetch shortcode
 
 Example:
-```html
-[fetch posts_per_page='10'] Show the {{post::post_title}} [/fetch]
-[fetch post_type='demonstration'] Show the {{post::post_title}} for demonstrations [/fetch]
+
+```php
+    [fetch posts_per_page='10'] Show the {{post::post_title}} [/fetch]
+    [fetch post_type='demonstration'] Show the {{post::post_title}} for demonstrations [/fetch]
 ```
 
 
@@ -137,34 +141,34 @@ Example:
 Example: 
 
 ```html
-[fetch posts_per_page='1']
+    [fetch posts_per_page='1']
 
-    <h2>Post Fields</h2>
-    {{post::post_title}} 
-    {{extras::permalink}} 
+        <h2>Post Fields</h2>
+        {{post::post_title}} 
+        {{extras::permalink}} 
 
-    <h2>Sanitize Fields to make them like a slug</h2>
-    {{post::post_title--sanitize}} 
+        <h2>Sanitize Fields to make them like a slug</h2>
+        {{post::post_title--sanitize}} 
 
-    <h2>Meta Fields</h2>
-    {{meta::meta_field}} 
+        <h2>Meta Fields</h2>
+        {{meta::meta_field}} 
 
-    <h2>Image Fields</h2>
-    {{image::url}} 
-    {{image::path}} 
-    {{image::metadata::width}} 
-    {{image::metadata::sizes::thumbnail::file}} 
+        <h2>Image Fields</h2>
+        {{image::url}} 
+        {{image::path}} 
+        {{image::metadata::width}} 
+        {{image::metadata::sizes::thumbnail::file}} 
 
-[/fetch]
+    [/fetch]
 ```
 
 
-###  3.7. <a name='Addtaxonomytagfilters'></a>Add taxonomy / tag filters
+###  3.7. <a name='Addtaxonomyandtagfilters'></a>Add taxonomy and tag filters
 
 You can change the taxonomy or term in the initial query.
 
 ```html
-[fetch taxonomy="tutorial_category" term="cat-leaps"] Show the {{post_title}} [/fetch]
+    [fetch taxonomy="tutorial_category" term="cat-leaps"] Show the {{post_title}} [/fetch]
 ```
 
 This will add the following tax_query onto the request for the posts.
