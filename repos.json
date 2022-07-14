@@ -599,14 +599,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__page-builder/master/README.md"
 }
 {
-  "NAME": "wp-pluging__menu--code-inject",
-  "REPO": "IORoot/wp-pluging__menu--code-inject",
-  "URL": "https://github.com/IORoot/wp-pluging__menu--code-inject",
+  "NAME": "wp-plugin__menus--extended",
+  "REPO": "IORoot/wp-plugin__menus--extended",
+  "URL": "https://github.com/IORoot/wp-plugin__menus--extended",
   "LANG": "php",
   "DESC": "Inject any HTML code into the wordpress menu",
   "DATE": "2021-01-08T14:35:55Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/wp-pluging__menu--code-inject/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/wp-plugin__menus--extended/master/README.md"
 }
 {
   "NAME": "wp-plugin__admin-themes",
