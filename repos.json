@@ -1,4 +1,14 @@
 {
+  "NAME": "htmltree",
+  "REPO": "IORoot/htmltree",
+  "URL": "https://github.com/IORoot/htmltree",
+  "LANG": "shell",
+  "DESC": "Generate HTML index.html files in a linux file structure.",
+  "DATE": "2022-07-20T15:31:44Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/htmltree/master/README.md"
+}
+{
   "NAME": "docker__puppeteer--facebook",
   "REPO": "IORoot/docker__puppeteer--facebook",
   "URL": "https://github.com/IORoot/docker__puppeteer--facebook",
