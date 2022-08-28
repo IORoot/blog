@@ -1,4 +1,14 @@
 {
+  "NAME": "spinnaker",
+  "REPO": "IORoot/spinnaker",
+  "URL": "https://github.com/IORoot/spinnaker",
+  "LANG": "shell",
+  "DESC": "BASH Framework builder inspired by Tailwind",
+  "DATE": "2022-08-22T09:49:38Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/spinnaker/master/README.md"
+}
+{
   "NAME": "htmltree",
   "REPO": "IORoot/htmltree",
   "URL": "https://github.com/IORoot/htmltree",
