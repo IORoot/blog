@@ -1,4 +1,24 @@
 {
+  "NAME": "AdvancedPropertySearch",
+  "REPO": "IORoot/AdvancedPropertySearch",
+  "URL": "https://github.com/IORoot/AdvancedPropertySearch",
+  "LANG": "null",
+  "DESC": "Public Repository for compiling the releases from the private repository.",
+  "DATE": "2022-10-05T13:05:01Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/AdvancedPropertySearch/master/README.md"
+}
+{
+  "NAME": "APS_wiki",
+  "REPO": "IORoot/APS_wiki",
+  "URL": "https://github.com/IORoot/APS_wiki",
+  "LANG": "javascript",
+  "DESC": "The wiki site for the APS project. Built on Docusaurus. ",
+  "DATE": "2022-10-03T07:01:38Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/APS_wiki/master/README.md"
+}
+{
   "NAME": "spinnaker",
   "REPO": "IORoot/spinnaker",
   "URL": "https://github.com/IORoot/spinnaker",
