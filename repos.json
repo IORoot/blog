@@ -1,12 +1,12 @@
 {
-  "NAME": "AdvancedPropertySearch",
-  "REPO": "IORoot/AdvancedPropertySearch",
-  "URL": "https://github.com/IORoot/AdvancedPropertySearch",
+  "NAME": "HouseQuests",
+  "REPO": "IORoot/HouseQuests",
+  "URL": "https://github.com/IORoot/HouseQuests",
   "LANG": "null",
   "DESC": "Public Repository for compiling the releases from the private repository.",
   "DATE": "2022-10-05T13:05:01Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/AdvancedPropertySearch/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/HouseQuests/master/README.md"
 }
 {
   "NAME": "APS_wiki",
