@@ -1,4 +1,24 @@
 {
+  "NAME": "youtube-poster",
+  "REPO": "IORoot/youtube-poster",
+  "URL": "https://github.com/IORoot/youtube-poster",
+  "LANG": "null",
+  "DESC": "Github Action to post to YouTube through their API. Used to connect to Make.com",
+  "DATE": "2023-02-03T16:17:23Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/youtube-poster/master/README.md"
+}
+{
+  "NAME": "social_automator",
+  "REPO": "IORoot/social_automator",
+  "URL": "https://github.com/IORoot/social_automator",
+  "LANG": "shell",
+  "DESC": "Social Media Automation",
+  "DATE": "2023-01-31T19:44:41Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/social_automator/master/README.md"
+}
+{
   "NAME": "DevopsDiagrams",
   "REPO": "IORoot/DevopsDiagrams",
   "URL": "https://github.com/IORoot/DevopsDiagrams",
