@@ -6,8 +6,6 @@ title: "ffmpeg__bash-scripts"
 icon:  "shell"
 desc:  "FFMPEG Utility scripts and video templates"
 ---
-
-
 # FFMPEG Util scripts and Templates
 
 This is a collection of scripts to automate simple video editing tasks.
@@ -16,6 +14,13 @@ The idea is that they can be chained together for more complex video effects and
 
 These are all based on BASH and FFMPEG.
 
+## Setup
+
+Either update your $PATH to include this folder or create a link in `/usr/local/bin` to each script.
+
+```
+PATH=$PATH:$(pwd)
+```
 
 ## Utility Scripts
 
@@ -35,6 +40,7 @@ Current list of scripts and their purposes.
 | `ff_grouptime.sh`    | Proportionally trims and concats videos to target video duration |
 | `ff_lut.sh`          | Apply a 3DL/Cube LUT file to a video                             |
 | `ff_middle.sh`       | Remove equal number of seconds from start and end of video       |
+| `ff_mov_to_mp4.sh`   | Convert an iPhone quicktime MOV to MP4 file                      |
 | `ff_pad.sh`          | Add a background padding around the video                        |
 | `ff_rotate.sh`       | Rotate a video in 90 degree increments                           |
 | `ff_scale.sh`        | Change the width and height of the video                         |
@@ -55,6 +61,8 @@ Current list of scripts and their purposes.
 
 #### Description
 This will append two files together while re-encoding them to be the same codec. Good if you need to change the codec of the video by transcoding them. Note the `ff_concat.sh` script is better if you do not need to transcode.
+
+![append](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/append.svg)
 
 #### Flags
 ```bash
@@ -89,6 +97,8 @@ Flags:
 
 This will alter the container metadata (DAR) of the video to the new aspect ratio.
 
+![aspect_ratio](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/aspect_ratio.svg)
+
 #### Flags
 
 ```
@@ -114,6 +124,17 @@ This will alter the container metadata (DAR) of the video to the new aspect rati
 #### Description
 
 Simple version of unsharp mask.
+
+```mermaid
+
+graph LR
+	input["-i input.mp4"]
+	pixels["--pixels 7</br>(Use a 7x7 pixel square for detection)"]
+	sharpen["--sharpen 3.2</br>(Using the 7x7 grid, sharpen by 3.2)"]
+	output["output.mp4"]
+
+	input-->pixels-->sharpen-->output
+```
 
 #### Flags
 ```
@@ -142,6 +163,20 @@ Simple version of unsharp mask.
 #### Description
 
 Change the Brightness, Contrast, Gamma, Gamma-Weight and Saturation of a video.
+
+```mermaid
+
+graph LR
+	input["-i input.mp4"]
+	brightness["--brightness 0.33</br>(Increase brightness by 33%)"]
+	contrast["--contrast 40</br>(Increase contrast by 4%)"]
+	gamma["--gamma 5.0</br>(Increase gamma by 50%)"]
+	weight["--weight 0.2</br>(Increase gamma weight by 20%)"]
+	saturation["--saturation 1.0</br>(Increase saturation by 0.33%)"]
+	output["output.mp4"]
+
+	input-->brightness-->contrast-->gamma-->weight-->saturation-->output
+```
 
 #### Flags
 
@@ -180,6 +215,9 @@ Change the Brightness, Contrast, Gamma, Gamma-Weight and Saturation of a video.
 
 Concatenate multiple videos into one output video.
 
+![concat](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/concat.svg)
+
+
 #### Flags
 ```
  -o | --output <OUTPUT_FILE>
@@ -201,6 +239,22 @@ Concatenate multiple videos into one output video.
 #### Description
 
 Crop video to specific size
+
+```mermaid
+
+graph LR
+	input["-i input.mp4<br/>(1920x1080)"]
+	width["-w 720<br/>Width of new frame"]
+	height["-h 720<br/>Height of new frame"]
+	xpixels["-x (iw-ow)/2<br/>Put video horizontally in center of frame"]
+	ypixels["-y (ih-oh)/2<br/>Put video vertically in center of frame"]
+	output["output.mp4"]
+
+	input-->width-->height-->xpixels-->ypixels-->output
+```
+
+![crop](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/crop.svg)
+
 
 #### Flags
 
@@ -244,6 +298,8 @@ Crop video to specific size
 
 Change the length of the video.
 
+![cut](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/cut.svg)
+
 #### Flags
 
 ```
@@ -266,11 +322,14 @@ Change the length of the video.
 ```
 
 
+
 ### `ff_flip.sh`
 
 #### Description
 
 Flip video horizontally and/or vertically.
+
+![flip](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/flip.svg)
 
 #### Flags
 
@@ -294,11 +353,14 @@ Flip video horizontally and/or vertically.
 ```
 
 
+
 ### `ff_fps.sh`
 
 #### Description
 
 Change the FPS of a video without changing the length.
+
+![fps](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/fps.svg)
 
 #### Flags
 ```
@@ -325,6 +387,8 @@ Change the FPS of a video without changing the length.
 #### Description
 
 Trim input videos by a percentage on start and end to get output video to correct duration.
+
+![grouptime](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/grouptime.svg)
 
 #### Flags
 ```
@@ -375,6 +439,8 @@ Apply a 3DL/Cube Look-Up Table (LUT) file to a video.
 
 Trim input video from start and end by a number of seconds.
 
+![middle](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/middle.svg)
+
 #### Flags
 ```
  -i | --input <INPUT_FILE>
@@ -392,11 +458,44 @@ Trim input video from start and end by a number of seconds.
         Options: quiet,panic,fatal,error,warning,info,verbose,debug,trace
 ```
 
+
+### `ff_mov_to_mp4.sh`
+
+#### Description
+
+Convert an Apple Quicktime MOV file into an H264 MP4 file. Useful when grouping/appending/concating multiple files.
+
+```mermaid
+
+graph LR
+	input["-i input.mov"]
+	output["output.mp4"]
+
+	input-->output
+```
+
+#### Flags
+```
+ -i | --input <INPUT_FILE>
+        The name of an input file.
+
+ -o | --output <OUTPUT_FILE>
+        Default is output_mov.mp4
+        The name of the output file.
+
+ -l | --loglevel <LOGLEVEL>
+        The FFMPEG loglevel to use. Default is 'error' only.
+        Options: quiet,panic,fatal,error,warning,info,verbose,debug,trace
+```
+
+
 ### `ff_pad.sh`
 
 #### Description
 
 Create padding around the edges of the video.
+
+![pad](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/pad.svg)
 
 #### Flags
 ```
@@ -457,6 +556,8 @@ Make black bars..
 
 Rotate a video.
 
+![rotate](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/rotate.svg)
+
 #### Flags
 
 ```
@@ -476,6 +577,8 @@ output_rotate.mp4 (default)
 #### Description
 
 Change the scale (Width/Height) of a video.
+
+![scale](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/scale.svg)
 
 #### Flags
 
@@ -533,6 +636,8 @@ Simple version of unsharp mask.
 #### Description
 
 Add text (with background box) on top of the video.
+
+![text](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/text.svg)
 
 #### Flags
 ```
@@ -618,6 +723,8 @@ Create thumbnails representative of the video.
 
 Convert a portrait video to landscape.
 
+![to_landscape](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/to_landscape.svg)
+
 #### Flags
 
 ```
@@ -646,6 +753,8 @@ Convert a portrait video to landscape.
 #### Description
 
 Convert a landscape video to portrait.
+
+![to_portrait](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/to_portrait.svg)
 
 #### Flags
 ```
@@ -727,6 +836,8 @@ Uses an unsharp mask to alter the luma,chroma and alpha of a video.
 #### Description
 
 Overlay a watermark on the video.
+
+![watermark](https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/lib/images/watermark.svg)
 
 #### Flags
 ```

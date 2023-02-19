@@ -1,9 +1,29 @@
 {
+  "NAME": "ngrok-debug-via-ssh",
+  "REPO": "IORoot/ngrok-debug-via-ssh",
+  "URL": "https://github.com/IORoot/ngrok-debug-via-ssh",
+  "LANG": "null",
+  "DESC": "Here you can find a GitHub Action that allows you to connect to a GitHub Actions runner via SSH for interactive debugging using ngrok.",
+  "DATE": "2023-02-13T16:50:06Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/ngrok-debug-via-ssh/master/README.md"
+}
+{
+  "NAME": "AI__autoflip",
+  "REPO": "IORoot/AI__autoflip",
+  "URL": "https://github.com/IORoot/AI__autoflip",
+  "LANG": "shell",
+  "DESC": "Machine-Learning Content-Aware video cropping tool in github action.",
+  "DATE": "2023-02-13T09:03:24Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/AI__autoflip/master/README.md"
+}
+{
   "NAME": "ffmpeg__bash-scripts",
   "REPO": "IORoot/ffmpeg__bash-scripts",
   "URL": "https://github.com/IORoot/ffmpeg__bash-scripts",
   "LANG": "shell",
-  "DESC": "FFMPEG Utility scripts and video templates",
+  "DESC": "🎞 FFMPEG Utility scripts and video templates to make life simpler. 💡",
   "DATE": "2023-02-08T08:18:45Z",
   "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/README.md"
