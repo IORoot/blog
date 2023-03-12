@@ -1,4 +1,14 @@
 {
+  "NAME": "youtube_uploader",
+  "REPO": "IORoot/youtube_uploader",
+  "URL": "https://github.com/IORoot/youtube_uploader",
+  "LANG": "null",
+  "DESC": "Allow me to publish to Youtube from Make.com via a git commit or curl request.",
+  "DATE": "2023-03-06T09:17:15Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/youtube_uploader/master/README.md"
+}
+{
   "NAME": "ngrok-debug-via-ssh",
   "REPO": "IORoot/ngrok-debug-via-ssh",
   "URL": "https://github.com/IORoot/ngrok-debug-via-ssh",
