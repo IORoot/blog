@@ -33,7 +33,7 @@
   "REPO": "IORoot/ffmpeg__bash-scripts",
   "URL": "https://github.com/IORoot/ffmpeg__bash-scripts",
   "LANG": "shell",
-  "DESC": "🎞 FFMPEG Utility scripts and video templates to make life simpler. 💡",
+  "DESC": "🎞 FFMPEG Utility scripts and JSON scripter. 💡Run multi-stage ffmpeg workflows using a JSON config.",
   "DATE": "2023-02-08T08:18:45Z",
   "TAGS": "REPLACE",
   "READ": "https://raw.githubusercontent.com/IORoot/ffmpeg__bash-scripts/master/README.md"
