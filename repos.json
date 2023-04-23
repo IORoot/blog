@@ -1,4 +1,14 @@
 {
+  "NAME": "londonparkour_store",
+  "REPO": "IORoot/londonparkour_store",
+  "URL": "https://github.com/IORoot/londonparkour_store",
+  "LANG": "null",
+  "DESC": "Docker-based LondonParkour store",
+  "DATE": "2023-04-20T17:12:44Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/londonparkour_store/master/README.md"
+}
+{
   "NAME": "youtube_uploader",
   "REPO": "IORoot/youtube_uploader",
   "URL": "https://github.com/IORoot/youtube_uploader",
