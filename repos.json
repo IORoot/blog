@@ -1,4 +1,14 @@
 {
+  "NAME": "webcomponent-ldnpk-infobox",
+  "REPO": "IORoot/webcomponent-ldnpk-infobox",
+  "URL": "https://github.com/IORoot/webcomponent-ldnpk-infobox",
+  "LANG": "javascript",
+  "DESC": "Custom vanilla WebComponent for the LondonParkour Info-box. ",
+  "DATE": "2023-06-11T16:09:45Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/webcomponent-ldnpk-infobox/master/README.md"
+}
+{
   "NAME": "standalone",
   "REPO": "IORoot/standalone",
   "URL": "https://github.com/IORoot/standalone",
