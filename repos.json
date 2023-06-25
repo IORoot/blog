@@ -1,4 +1,34 @@
 {
+  "NAME": "webcomponent-ldnpk-blocksubtitle",
+  "REPO": "IORoot/webcomponent-ldnpk-blocksubtitle",
+  "URL": "https://github.com/IORoot/webcomponent-ldnpk-blocksubtitle",
+  "LANG": "javascript",
+  "DESC": "Custom vanilla WebComponent for the LondonParkour SubTitle.",
+  "DATE": "2023-06-20T10:21:19Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/webcomponent-ldnpk-blocksubtitle/master/README.md"
+}
+{
+  "NAME": "webcomponent-ldnpk-blocktitle",
+  "REPO": "IORoot/webcomponent-ldnpk-blocktitle",
+  "URL": "https://github.com/IORoot/webcomponent-ldnpk-blocktitle",
+  "LANG": "javascript",
+  "DESC": "Custom vanilla WebComponent for the LondonParkour blockTitle",
+  "DATE": "2023-06-20T08:30:02Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/webcomponent-ldnpk-blocktitle/master/README.md"
+}
+{
+  "NAME": "webcomponent-ldnpk-button",
+  "REPO": "IORoot/webcomponent-ldnpk-button",
+  "URL": "https://github.com/IORoot/webcomponent-ldnpk-button",
+  "LANG": "javascript",
+  "DESC": "Custom vanilla WebComponent for the LondonParkour button.",
+  "DATE": "2023-06-18T10:09:20Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/webcomponent-ldnpk-button/master/README.md"
+}
+{
   "NAME": "webcomponent-ldnpk-infobox",
   "REPO": "IORoot/webcomponent-ldnpk-infobox",
   "URL": "https://github.com/IORoot/webcomponent-ldnpk-infobox",
