@@ -1,4 +1,34 @@
 {
+  "NAME": "webcomponent-ldnpk-navbar",
+  "REPO": "IORoot/webcomponent-ldnpk-navbar",
+  "URL": "https://github.com/IORoot/webcomponent-ldnpk-navbar",
+  "LANG": "javascript",
+  "DESC": "The mega-menu navigation bar webcomponents. <ldnpk-navbar> and <ldnpk-navitem>",
+  "DATE": "2023-06-27T11:26:40Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/webcomponent-ldnpk-navbar/master/README.md"
+}
+{
+  "NAME": "webcomponent-ldnpk-webstorecard",
+  "REPO": "IORoot/webcomponent-ldnpk-webstorecard",
+  "URL": "https://github.com/IORoot/webcomponent-ldnpk-webstorecard",
+  "LANG": "javascript",
+  "DESC": "Store-specific card element for mega menu",
+  "DATE": "2023-06-27T11:24:54Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/webcomponent-ldnpk-webstorecard/master/README.md"
+}
+{
+  "NAME": "webcomponent-ldnpk-menucard",
+  "REPO": "IORoot/webcomponent-ldnpk-menucard",
+  "URL": "https://github.com/IORoot/webcomponent-ldnpk-menucard",
+  "LANG": "javascript",
+  "DESC": "A card-element for a mega-menu",
+  "DATE": "2023-06-27T11:23:43Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/webcomponent-ldnpk-menucard/master/README.md"
+}
+{
   "NAME": "webcomponent-ldnpk-blocksubtitle",
   "REPO": "IORoot/webcomponent-ldnpk-blocksubtitle",
   "URL": "https://github.com/IORoot/webcomponent-ldnpk-blocksubtitle",
@@ -222,7 +252,7 @@
   "NAME": "blog",
   "REPO": "IORoot/blog",
   "URL": "https://github.com/IORoot/blog",
-  "LANG": "null",
+  "LANG": "mdx",
   "DESC": "Markdown content for gatsby",
   "DATE": "2022-05-20T10:25:35Z",
   "TAGS": "REPLACE",
