@@ -1,4 +1,24 @@
 {
+  "NAME": "webcomponent-ldnpk-navigation",
+  "REPO": "IORoot/webcomponent-ldnpk-navigation",
+  "URL": "https://github.com/IORoot/webcomponent-ldnpk-navigation",
+  "LANG": "javascript",
+  "DESC": "The mainmenu webcomponent for the LondonParkour.com website.",
+  "DATE": "2023-07-06T07:20:12Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/webcomponent-ldnpk-navigation/master/README.md"
+}
+{
+  "NAME": "webcomponent-ldnpk-menunewscard",
+  "REPO": "IORoot/webcomponent-ldnpk-menunewscard",
+  "URL": "https://github.com/IORoot/webcomponent-ldnpk-menunewscard",
+  "LANG": "javascript",
+  "DESC": "A webcomponent variation of a simple card for the news on the menu of the londonparkour.com website.",
+  "DATE": "2023-07-06T07:17:13Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/webcomponent-ldnpk-menunewscard/master/README.md"
+}
+{
   "NAME": "webcomponent-ldnpk-navbar",
   "REPO": "IORoot/webcomponent-ldnpk-navbar",
   "URL": "https://github.com/IORoot/webcomponent-ldnpk-navbar",
@@ -19,14 +39,14 @@
   "READ": "https://raw.githubusercontent.com/IORoot/webcomponent-ldnpk-webstorecard/master/README.md"
 }
 {
-  "NAME": "webcomponent-ldnpk-menucard",
-  "REPO": "IORoot/webcomponent-ldnpk-menucard",
-  "URL": "https://github.com/IORoot/webcomponent-ldnpk-menucard",
+  "NAME": "webcomponent-ldnpk-menuclasscard",
+  "REPO": "IORoot/webcomponent-ldnpk-menuclasscard",
+  "URL": "https://github.com/IORoot/webcomponent-ldnpk-menuclasscard",
   "LANG": "javascript",
   "DESC": "A card-element for a mega-menu",
   "DATE": "2023-06-27T11:23:43Z",
   "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/webcomponent-ldnpk-menucard/master/README.md"
+  "READ": "https://raw.githubusercontent.com/IORoot/webcomponent-ldnpk-menuclasscard/master/README.md"
 }
 {
   "NAME": "webcomponent-ldnpk-blocksubtitle",
