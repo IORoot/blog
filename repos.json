@@ -1,4 +1,14 @@
 {
+  "NAME": "site_audits",
+  "REPO": "IORoot/site_audits",
+  "URL": "https://github.com/IORoot/site_audits",
+  "LANG": "null",
+  "DESC": "Perform website audits",
+  "DATE": "2023-08-12T06:57:24Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/site_audits/master/README.md"
+}
+{
   "NAME": "tiktok-uploader",
   "REPO": "IORoot/tiktok-uploader",
   "URL": "https://github.com/IORoot/tiktok-uploader",
