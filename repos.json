@@ -9,16 +9,6 @@
   "READ": "https://raw.githubusercontent.com/IORoot/site_audits/master/README.md"
 }
 {
-  "NAME": "tiktok-uploader",
-  "REPO": "IORoot/tiktok-uploader",
-  "URL": "https://github.com/IORoot/tiktok-uploader",
-  "LANG": "null",
-  "DESC": "Github Action to post to TikTok",
-  "DATE": "2023-08-05T13:28:46Z",
-  "TAGS": "REPLACE",
-  "READ": "https://raw.githubusercontent.com/IORoot/tiktok-uploader/master/README.md"
-}
-{
   "NAME": "webcomponent-ldnpk-menunewsvideo",
   "REPO": "IORoot/webcomponent-ldnpk-menunewsvideo",
   "URL": "https://github.com/IORoot/webcomponent-ldnpk-menunewsvideo",
