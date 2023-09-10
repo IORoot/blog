@@ -1,4 +1,14 @@
 {
+  "NAME": "wp-sandbox",
+  "REPO": "IORoot/wp-sandbox",
+  "URL": "https://github.com/IORoot/wp-sandbox",
+  "LANG": "typescript",
+  "DESC": "Sandbox Wordpress",
+  "DATE": "2023-09-09T06:56:39Z",
+  "TAGS": "REPLACE",
+  "READ": "https://raw.githubusercontent.com/IORoot/wp-sandbox/master/README.md"
+}
+{
   "NAME": "site_audits",
   "REPO": "IORoot/site_audits",
   "URL": "https://github.com/IORoot/site_audits",
